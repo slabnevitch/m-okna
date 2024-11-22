@@ -4,7 +4,8 @@ module.exports = {
 	content: [ 'app/*.html', 'app/js/*.js', '!app/js/*.min.js' ],
 	theme: {
 		screens: { //полная перезапись дефолтных точек
-			'xl': {'max': '1824px'},
+			'xxl': {'max': '1824px'},
+			'xl': {'max': '1600px'},
 			'lg': {'max': '1199.99px'},
 			'md': {'max': '991.98px'},
 			'sm': {'max': '767.98px'},
@@ -28,7 +29,7 @@ module.exports = {
 		       DEFAULT: '0px 2px 2px #840E05'
 		    },
 		    maxWidth: {
-		    	cont: '1824px'
+		    	cont: '1888px' // 1824 - без паддингов
 		    },
 			colors: {
 				accent: '#2B2862',

@@ -1,21 +1,26 @@
 header(class="sticky w-full left-0 top-0 overflow-hidden")
-	div(class="max-w-cont mx-auto flex gap-x-2.5 justify-between items-center min-h-28 py-2.5")
-		div(class="flex items-center gap-x-12")
-			div(class="max-w-48")
+	div(class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20")
+		div(class="flex items-center gap-x-12 xl:gap-x-6")
+			div(class="max-w-48 shrink-0 xl:max-w-36")
 				img.w-full(src="img/logo.svg" alt="alt")
 
-			nav(class="mt-4")
+			nav(class="mt-4 xl:mt-2")
 				- let menu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
-				ul(class="flex items-center gap-x-6 gap-y-2")
+				ul(class="flex flex-wrap items-center gap-x-6 xl:gap-x-3")
 					each li, i in menu
 						li(class="")
-							a(href="#" class="text-lg font-bold text-accent leading-5")= li
+							a(href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm")= li
 
-		div(class="flex gap-x-7 text-accent mt-4")
-			a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 text-lg font-bold leading-5 text-accent")
+		div(class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2")
+			a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1")
 				span.icon-mail
-				ru_lon68@mail.ru
+				span(class="text-lg xl:text-sm") ru_lon68@mail.ru
 
-			a(href="tel:89107577471" class="flex items-center gap-x-3 text-lg font-bold leading-5 text-accent")
+			a(href="tel:89107577471" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1")
 				span.icon-phone
-				8 (910) 757-74-71
+				span(class="text-lg xl:text-sm whitespace-nowrap") 8 (910) 757-74-71
+
+			button(class="btn h-10 xl:text-sm" type="button") Заказать звонок
+
+		button#burger(class="w-7 h-5 shrink-0 hidden ml-auto lg:block" type="button")
+			img(src="img/icons-svg/burger.svg" alt="alt")

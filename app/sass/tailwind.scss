@@ -31,6 +31,6 @@
 }
 @layer components { //снижает приоритет стилей, их можно будет перебить классами в хтмл
 	.btn{
-		@apply px-[1.5rem] h-[3.125rem] flex justify-center items-center text-lg text-white rounded-xl border border-transparent;
+		@apply px-6 py-5 h-16 flex justify-center items-center text-lg font-bold text-white border border-transparent bg-blue transition-colors hover:bg-blue/70;
 	}
 }
