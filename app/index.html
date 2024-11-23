@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="h-full">
+<html lang="ru" class="group h-full">
   <head>
     <meta charset="utf-8">
     <title>Главная страница</title>
@@ -20,25 +20,25 @@
   <body class="h-full">
     <div class="flex min-h-full flex-col overflow-hidden supports-[overflow: clip]:overflow-clip">
       <header class="shrink-0 grow-0">
-        <header class="sticky w-full left-0 top-0 overflow-hidden">
-          <div class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20">
+        <header class="sticky w-full left-0 top-0 overflow-hidden bg-white shadow-md">
+          <div class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20 md:min-h-16">
             <div class="flex items-center gap-x-12 xl:gap-x-6">
-              <div class="max-w-48 shrink-0 xl:max-w-36"><img src="img/logo.svg" alt="alt" class="w-full"></div>
+              <div class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 sm:z-[11]"><img src="img/logo.svg" alt="alt" class="w-full"></div>
               <nav class="mt-4 xl:mt-2">
-                <ul class="flex flex-wrap items-center gap-x-6 xl:gap-x-3">
-                  <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Каталог</a></li>
-                  <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Материалы</a></li>
-                  <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">FAQ</a></li>
-                  <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Работы</a></li>
-                  <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">О компании</a></li>
-                  <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Отзывы</a></li>
-                </ul>
+                    <ul class="flex flex-wrap items-center gap-x-6 xl:gap-x-3 group-[.menu-opened]:right-0 lg:fixed lg:z-10 lg:top-0 lg:-right-[100%] lg:pt-[100px] lg:pb-[50px] lg:flex-col lg:flex-nowrap lg:justify-center lg:items-center lg:gap-y-[2rem] lg:w-full lg:h-full lg:transition-[right] lg:duration-500 lg:overflow-y-auto lg:bg-[#fff] lg:before:fixed lg:before:w-full lg:before:h-16 lg:before:top-0 lg:before:-right-[100%] lg:before:transition-[right] lg:before:z-2 lg:before:bg-[#00B4EF] group-[.menu-opened]:before:right-0">
+                      <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Каталог</a></li>
+                      <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Материалы</a></li>
+                      <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">FAQ</a></li>
+                      <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Работы</a></li>
+                      <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">О компании</a></li>
+                      <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Отзывы</a></li>
+                    </ul>
               </nav>
             </div>
-            <div class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2"><a href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1"><span class="icon-mail"></span><span class="text-lg xl:text-sm">ru_lon68@mail.ru</span></a><a href="tel:89107577471" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1"><span class="icon-phone"></span><span class="text-lg xl:text-sm whitespace-nowrap">8 (910) 757-74-71</span></a>
-              <button type="button" class="btn h-10 xl:text-sm">Заказать звонок</button>
+            <div class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2 xl:ml-auto"><a href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1 md:hidden"><span class="icon-mail"></span><span class="text-lg xl:text-sm">ru_lon68@mail.ru</span></a><a href="tel:89107577471" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1 md:hidden"><span class="icon-phone"></span><span class="text-lg xl:text-sm whitespace-nowrap">8 (910) 757-74-71</span></a>
+              <button type="button" class="shrink-0 btn h-10 xl:text-sm xs:hidden">Заказать звонок</button>
             </div>
-            <button id="burger" type="button" class="w-7 h-5 shrink-0 hidden ml-auto lg:block"><img src="img/icons-svg/burger.svg" alt="alt"></button>
+            <button id="burger" type="button" class="z-[11] w-7 h-5 shrink-0 mt-2 hidden lg:block sm:-mr-4"><img src="img/icons-svg/burger.svg" alt="alt"></button>
           </div>
         </header>
       </header>

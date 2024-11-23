@@ -212,5 +212,10 @@
 // console.log(magnificPopup)
 
 document.addEventListener('DOMContentLoaded', () => {
+	document.querySelector('#burger').onclick = function(e) {
+		document.querySelector('#burger').classList.toggle('on');
+		document.documentElement.classList.toggle('menu-opened');
+		document.documentElement.classList.toggle('lock');
+	}
 
 }); //DOMContentLoaded

@@ -1,26 +1,32 @@
-header(class="sticky w-full left-0 top-0 overflow-hidden")
-	div(class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20")
+header(class="sticky w-full left-0 top-0 overflow-hidden bg-white shadow-md")
+	div(class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20 md:min-h-16")
 		div(class="flex items-center gap-x-12 xl:gap-x-6")
-			div(class="max-w-48 shrink-0 xl:max-w-36")
+			div(class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 sm:z-[11]")
 				img.w-full(src="img/logo.svg" alt="alt")
 
 			nav(class="mt-4 xl:mt-2")
 				- let menu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
-				ul(class="flex flex-wrap items-center gap-x-6 xl:gap-x-3")
+				
+				+tw-mob-menu('flex flex-wrap items-center gap-x-6 xl:gap-x-3', 'lg', '#fff', '#00B4EF', 16)
 					each li, i in menu
 						li(class="")
 							a(href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm")= li
 
-		div(class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2")
-			a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1")
+				//- ul(class="flex flex-wrap items-center gap-x-6 xl:gap-x-3")
+					//- each li, i in menu
+					//- 	li(class="")
+					//- 		a(href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm")= li
+
+		div(class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2 xl:ml-auto")
+			a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1 md:hidden")
 				span.icon-mail
 				span(class="text-lg xl:text-sm") ru_lon68@mail.ru
 
-			a(href="tel:89107577471" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1")
+			a(href="tel:89107577471" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1 md:hidden")
 				span.icon-phone
 				span(class="text-lg xl:text-sm whitespace-nowrap") 8 (910) 757-74-71
 
-			button(class="btn h-10 xl:text-sm" type="button") Заказать звонок
+			button(class="shrink-0 btn h-10 xl:text-sm xs:hidden" type="button") Заказать звонок
 
-		button#burger(class="w-7 h-5 shrink-0 hidden ml-auto lg:block" type="button")
+		button#burger(class="z-[11] w-7 h-5 shrink-0 mt-2 hidden lg:block sm:-mr-4" type="button")
 			img(src="img/icons-svg/burger.svg" alt="alt")
