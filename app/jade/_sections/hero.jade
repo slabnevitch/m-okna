@@ -1,26 +1,30 @@
 section
-	div(class="max-w-cont mx-auto px-8")
+	div(class="max-w-[1824px] mx-auto")
 		+swiper('my-swiper', true, false, true)
-			div(class="swiper-slide flex bg-accent")
-				div(class="pt-32 pb-44 w-[50.46%] shrink-0")
-					h2(class="mb-6 text-white") Установка мягких окон 
-						div.text-blue под ключ за 7 дней
+			- for (var i=0; i < 3; i++)
+				div(class="swiper-slide flex bg-accent overflow-hidden md:flex-col")
+					div(class="pt-32 pb-44 w-[50.46%] shrink-0 relative z-[2] xl:pt-20 xl:pb-28 md:w-full md:py-8")
+						h2(class="mb-6 text-white xxl:text-5xl xl:text-4xl") Установка мягких окон 
+							div.text-blue под ключ за 7 дней
 
-					div(class="pl-40")
-						p(class="text-xl text-white line-height-[calc(30 / 21)] mb-16") Обратившись в нашу компанию Вы гарантировано получите качественные мягкие окна по лучшей цене.
-					
-						div(class="flex gap-x-6")
-							button(class="btn" type="button")
-								span Подробнее
-								span.icon-exit.text-base
+						div(class="pl-40 lg:px-10")
+							p(class="text-xl text-white line-height-[calc(30 / 21)] mb-16") Обратившись в нашу компанию Вы гарантировано получите качественные мягкие окна по лучшей цене.
 						
-							div(class="flex")
-								button(type="button" class="hero-slider-prev w-16 flex items-center justify-center border border-px border-white border-r-0 text-white text-xs transition-colors hover:bg-white hover:text-accent")
-									span.icon-arrow-left
+							div(class="flex gap-x-6")
+								button(class="btn" type="button")
+									span Подробнее
+									span.icon-exit.text-base
+							
+								div(class="flex")
+									button(type="button" class="hero-slider-prev w-16 flex items-center justify-center border border-px border-white border-r-0 text-white text-xs transition-colors hover:bg-white hover:text-accent")
+										span.icon-arrow-left
 
-								button(type="button" class="hero-slider-next w-16 flex items-center justify-center border border-px border-white text-white text-xs transition-colors hover:bg-white hover:text-accent")
-									span.icon-arroq-ritght
+									button(type="button" class="hero-slider-next w-16 flex items-center justify-center border border-px border-white text-white text-xs transition-colors hover:bg-white hover:text-accent")
+										span.icon-arroq-ritght
 
 
 
-				div(class="relative shrink grow bg-[url('../img/hero/decor.svg')] bg-repeat-y bg-right-top")
+					div(class="relative shrink grow md:aspect-[320/270]")
+						div(class="absolute top-0 right-0 w-[75%] h-full bg-[url('../img/hero/decor.svg')] bg-repeat-y bg-right-top opacity-50 xs:bg-[url('../img/hero/decor-mob.svg')]")
+						div(class="absolute bottom-[-67px] right-[-58px] w-[calc(100%_+_106px)] h-[calc(100%_-_22px)] md:w-[calc(100%_+_116px)] md:right-auto md:left-0 sm:height-full xs:bottom-[-15px]")
+							img(class="absolute bottom-0 right-0 max-w-full max-h-full md:right-auto md:left-0" src="img/hero/"+(i+1)+".png" alt="alt")

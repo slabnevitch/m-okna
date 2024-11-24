@@ -20,10 +20,10 @@
   <body class="h-full">
     <div class="flex min-h-full flex-col overflow-hidden supports-[overflow: clip]:overflow-clip">
       <header class="shrink-0 grow-0">
-        <header class="sticky w-full left-0 top-0 overflow-hidden bg-white shadow-md">
+        <header class="sticky z-[5] w-full left-0 top-0 overflow-hidden bg-white shadow-md">
           <div class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20 md:min-h-16">
             <div class="flex items-center gap-x-12 xl:gap-x-6">
-              <div class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 sm:z-[11]"><img src="img/logo.svg" alt="alt" class="w-full"></div>
+              <div class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 lg:z-[11]"><img src="img/logo.svg" alt="alt" class="w-full"></div>
               <nav class="mt-4 xl:mt-2">
                     <ul class="flex flex-wrap items-center gap-x-6 xl:gap-x-3 group-[.menu-opened]:right-0 lg:fixed lg:z-10 lg:top-0 lg:-right-[100%] lg:pt-[100px] lg:pb-[50px] lg:flex-col lg:flex-nowrap lg:justify-center lg:items-center lg:gap-y-[2rem] lg:w-full lg:h-full lg:transition-[right] lg:duration-500 lg:overflow-y-auto lg:bg-[#fff] lg:before:fixed lg:before:w-full lg:before:h-16 lg:before:top-0 lg:before:-right-[100%] lg:before:transition-[right] lg:before:z-2 lg:before:bg-[#00B4EF] group-[.menu-opened]:before:right-0">
                       <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm">Каталог</a></li>
@@ -44,15 +44,15 @@
       </header>
       <main class="flex-auto shrink-1 grow-1">
         <section>
-          <div class="max-w-cont mx-auto px-8">
+          <div class="max-w-[1824px] mx-auto">
                 <div class="swiper-container swiper my-swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide flex bg-accent">
-                      <div class="pt-32 pb-44 w-[50.46%] shrink-0">
-                        <h2 class="mb-6 text-white">Установка мягких окон 
+                    <div class="swiper-slide flex bg-accent overflow-hidden md:flex-col">
+                      <div class="pt-32 pb-44 w-[50.46%] shrink-0 relative z-[2] xl:pt-20 xl:pb-28 md:w-full md:py-8">
+                        <h2 class="mb-6 text-white xxl:text-5xl xl:text-4xl">Установка мягких окон 
                           <div class="text-blue">под ключ за 7 дней</div>
                         </h2>
-                        <div class="pl-40">
+                        <div class="pl-40 lg:px-10">
                           <p class="text-xl text-white line-height-[calc(30 / 21)] mb-16">Обратившись в нашу компанию Вы гарантировано получите качественные мягкие окна по лучшей цене.</p>
                           <div class="flex gap-x-6">
                             <button type="button" class="btn"><span>Подробнее</span><span class="icon-exit text-base"></span></button>
@@ -63,7 +63,52 @@
                           </div>
                         </div>
                       </div>
-                      <div class="relative shrink grow bg-[url('../img/hero/decor.svg')] bg-repeat-y bg-right-top"></div>
+                      <div class="relative shrink grow md:aspect-[320/270]">
+                        <div class="absolute top-0 right-0 w-[75%] h-full bg-[url('../img/hero/decor.svg')] bg-repeat-y bg-right-top opacity-50 xs:bg-[url('../img/hero/decor-mob.svg')]"></div>
+                        <div class="absolute bottom-[-67px] right-[-58px] w-[calc(100%_+_106px)] h-[calc(100%_-_22px)] md:w-[calc(100%_+_116px)] md:right-auto md:left-0 sm:height-full xs:bottom-[-15px]"><img src="img/hero/1.png" alt="alt" class="absolute bottom-0 right-0 max-w-full max-h-full md:right-auto md:left-0"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide flex bg-accent overflow-hidden md:flex-col">
+                      <div class="pt-32 pb-44 w-[50.46%] shrink-0 relative z-[2] xl:pt-20 xl:pb-28 md:w-full md:py-8">
+                        <h2 class="mb-6 text-white xxl:text-5xl xl:text-4xl">Установка мягких окон 
+                          <div class="text-blue">под ключ за 7 дней</div>
+                        </h2>
+                        <div class="pl-40 lg:px-10">
+                          <p class="text-xl text-white line-height-[calc(30 / 21)] mb-16">Обратившись в нашу компанию Вы гарантировано получите качественные мягкие окна по лучшей цене.</p>
+                          <div class="flex gap-x-6">
+                            <button type="button" class="btn"><span>Подробнее</span><span class="icon-exit text-base"></span></button>
+                            <div class="flex">
+                              <button type="button" class="hero-slider-prev w-16 flex items-center justify-center border border-px border-white border-r-0 text-white text-xs transition-colors hover:bg-white hover:text-accent"><span class="icon-arrow-left"></span></button>
+                              <button type="button" class="hero-slider-next w-16 flex items-center justify-center border border-px border-white text-white text-xs transition-colors hover:bg-white hover:text-accent"><span class="icon-arroq-ritght"></span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative shrink grow md:aspect-[320/270]">
+                        <div class="absolute top-0 right-0 w-[75%] h-full bg-[url('../img/hero/decor.svg')] bg-repeat-y bg-right-top opacity-50 xs:bg-[url('../img/hero/decor-mob.svg')]"></div>
+                        <div class="absolute bottom-[-67px] right-[-58px] w-[calc(100%_+_106px)] h-[calc(100%_-_22px)] md:w-[calc(100%_+_116px)] md:right-auto md:left-0 sm:height-full xs:bottom-[-15px]"><img src="img/hero/2.png" alt="alt" class="absolute bottom-0 right-0 max-w-full max-h-full md:right-auto md:left-0"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide flex bg-accent overflow-hidden md:flex-col">
+                      <div class="pt-32 pb-44 w-[50.46%] shrink-0 relative z-[2] xl:pt-20 xl:pb-28 md:w-full md:py-8">
+                        <h2 class="mb-6 text-white xxl:text-5xl xl:text-4xl">Установка мягких окон 
+                          <div class="text-blue">под ключ за 7 дней</div>
+                        </h2>
+                        <div class="pl-40 lg:px-10">
+                          <p class="text-xl text-white line-height-[calc(30 / 21)] mb-16">Обратившись в нашу компанию Вы гарантировано получите качественные мягкие окна по лучшей цене.</p>
+                          <div class="flex gap-x-6">
+                            <button type="button" class="btn"><span>Подробнее</span><span class="icon-exit text-base"></span></button>
+                            <div class="flex">
+                              <button type="button" class="hero-slider-prev w-16 flex items-center justify-center border border-px border-white border-r-0 text-white text-xs transition-colors hover:bg-white hover:text-accent"><span class="icon-arrow-left"></span></button>
+                              <button type="button" class="hero-slider-next w-16 flex items-center justify-center border border-px border-white text-white text-xs transition-colors hover:bg-white hover:text-accent"><span class="icon-arroq-ritght"></span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative shrink grow md:aspect-[320/270]">
+                        <div class="absolute top-0 right-0 w-[75%] h-full bg-[url('../img/hero/decor.svg')] bg-repeat-y bg-right-top opacity-50 xs:bg-[url('../img/hero/decor-mob.svg')]"></div>
+                        <div class="absolute bottom-[-67px] right-[-58px] w-[calc(100%_+_106px)] h-[calc(100%_-_22px)] md:w-[calc(100%_+_116px)] md:right-auto md:left-0 sm:height-full xs:bottom-[-15px]"><img src="img/hero/3.png" alt="alt" class="absolute bottom-0 right-0 max-w-full max-h-full md:right-auto md:left-0"></div>
+                      </div>
                     </div>
                   </div>
                   <div class="swiper-pagination"></div>
