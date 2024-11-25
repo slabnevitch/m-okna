@@ -7,8 +7,8 @@
 
 // Swiper----------------------------
 import Swiper from 'swiper';
-import { Navigation, Autoplay, Parallax} from 'swiper/modules';
-Swiper.use([Navigation, Autoplay, Parallax]);
+import { Navigation, Pagination, Autoplay, Parallax} from 'swiper/modules';
+Swiper.use([Navigation, Pagination, Autoplay, Parallax]);
 
 // Lazysizes--------------------------
 // import 'lazysizes'; //основной скрипт
@@ -223,42 +223,51 @@ document.addEventListener('DOMContentLoaded', () => {
 	if(document.querySelector('.hero-swiper') !== null){
 		var swiper = new Swiper('.hero-swiper', {
 
-	// effect: 'fade',
-	// fadeEffect: {//при отсутствии плавного перехода - расскомментировать соотв-ю. строку в adjustment.scss
-	//     crossFade: true
-	//   },
-	// autoplay: {
-	// 	delay: 3000,
-	// 	disableOnInteraction: false,
-	// },
-	parallax: {
-		enabled: true
-	},
-	observer: true,
-	observeParents: true,
+		// effect: 'fade',
+		// fadeEffect: {//при отсутствии плавного перехода - расскомментировать соотв-ю. строку в adjustment.scss
+		//     crossFade: true
+		//   },
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
+		parallax: {
+			enabled: true
+		},
+		observer: true,
+		observeParents: true,
 
-	//freeMode: true,// в сочетании с mousewheel дает возможность прокручивать стр-цу. после докручивания слайдера до начала или конца колесом мыши
-	slidesPerView: 1,
-	//spaceBetween: 0,
-	//autoHeight: true,
-	speed: 800,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-  // direction: 'vertical',
-			loop: true,
-  watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
+		//freeMode: true,// в сочетании с mousewheel дает возможность прокручивать стр-цу. после докручивания слайдера до начала или конца колесом мыши
+		slidesPerView: 1,
+		//spaceBetween: 0,
+		//autoHeight: true,
+		speed: 1600,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		//loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		  // direction: 'vertical',
+		loop: true,
+	  	watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
 
-  // Navigation arrows
-  navigation: {
-  	nextEl: '.hero-slider-next',
-  	prevEl: '.hero-slider-prev',
-  },
+		pagination: {
+	 		el: '.pagination-count',
+	 		type: 'custom',
+	 		renderCustom: (swiper, current, total) => {
+	 			console.log(current + ' ' + total)
+	 			return `<span class="text-white">${current}</span><span class="text-[#BBBBBB]">/</span><span class="text-[#BBBBBB]">${total}</span>`;
+	 		}
+	 	},
+
+		// Navigation arrows
+	  	navigation: {
+	  		nextEl: '.hero-slider-next',
+	  		prevEl: '.hero-slider-prev',
+	  	},
 
 
-});
+	  });
 	}
 //---------------END Swiper
 

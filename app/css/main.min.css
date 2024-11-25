@@ -1487,6 +1487,9 @@ h2::before {
 .font-bold {
   font-family: "TTTravels-Bold", sans-serif;
 }
+.font-medium {
+  font-family: "TTTravels-Medium", sans-serif;
+}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1503,8 +1506,15 @@ h2::before {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .font-bold {
   font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
 }
 .leading-5 {
   line-height: 1.25rem;
@@ -1689,11 +1699,6 @@ h2::before {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
-  .lg\:before\:bg-\[red\]::before {
-    content: var(--tw-content);
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-  }
   .lg\:before\:transition-\[right\]::before {
     content: var(--tw-content);
     transition-property: right;
@@ -1773,11 +1778,6 @@ h2::before {
     background-image: url('../img/hero/decor-mob.svg');
   }
   .xs\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-  .xs\:before\:text-xs::before {
-    content: var(--tw-content);
     font-size: 0.75rem;
     line-height: 1rem;
   }
