@@ -93,8 +93,9 @@ mixin crystalRating(rating)
 				input(value='5' type='radio' name='crystal')
 		.crystal-rating__value= rating
 
-mixin tw-mob-menu(classes='', point='sm', bg='#fff', plateBg='#fff', plateHeight=24)
-	ul(class=classes +' group-[.menu-opened]:right-0'+' '+point+':fixed'+' '+point+':z-10'+' '+point+':top-0'+' ' + point+':-right-[100%]'+' '+ point+':pt-[100px]'+' '+ point+':pb-[50px]'+' '+ point+':flex-col'+' '+ point+':flex-nowrap'+' '+ point+':justify-center'+' '+ point+':items-center'+' '+ point+':gap-y-[2rem]'+' '+ point+':w-full'+' '+ point+':h-full'+' '+ point+':transition-[right]'+' '+ point+':duration-500'+' '+ point+':overflow-y-auto'+' '+ point+':bg-'+'['+bg+']'+' '+ point+':before:fixed'+' '+ point+':before:w-full'+' '+ point+':before:h-'+plateHeight+' '+ point+':before:top-0'+' '+ point+':before:-right-[100%]'+' '+ point+':before:transition-[right]'+' '+ point+':before:z-2'+' '+ point+':before:bg-['+plateBg+']'+' '+'group-[.menu-opened]:before:right-0')
+mixin tw-mob-menu(classes='', point='sm', bg='[#fff]', plateBg='[#fff]', plateHeight=24)
+	//- bg, plateBg передавать в формате '[#fff]' либо 'accent'(для заданных tw-переменных)
+	ul(class=classes +' group-[.menu-opened]:right-0'+' '+point+':fixed'+' '+point+':z-10'+' '+point+':top-0'+' ' + point+':-right-[100%]'+' '+ point+':pt-[100px]'+' '+ point+':pb-[50px]'+' '+ point+':flex-col'+' '+ point+':flex-nowrap'+' '+ point+':justify-center'+' '+ point+':items-center'+' '+ point+':gap-y-[2rem]'+' '+ point+':w-full'+' '+ point+':h-full'+' '+ point+':transition-[right]'+' '+ point+':duration-500'+' '+ point+':overflow-y-auto'+' '+ point+':bg-'+bg+' '+ point+':before:fixed'+' '+ point+':before:w-full'+' '+ point+':before:h-'+plateHeight+' '+ point+':before:top-0'+' '+ point+':before:-right-[100%]'+' '+ point+':before:duration-500'+' ' + point+':before:transition-[right]'+' '+ point+':before:z-2'+' '+ point+':before:bg-'+plateBg+' '+'group-[.menu-opened]:before:right-0')
 		
 		if block
 			block

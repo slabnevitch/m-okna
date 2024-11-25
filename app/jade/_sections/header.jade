@@ -7,10 +7,10 @@ header(class="sticky z-[5] w-full left-0 top-0 overflow-hidden bg-white shadow-m
 			nav(class="mt-4 xl:mt-2")
 				- let menu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
 				
-				+tw-mob-menu('flex flex-wrap items-center gap-x-6 xl:gap-x-3', 'lg', '#fff', '#00B4EF', 16)
+				+tw-mob-menu('flex flex-wrap items-center gap-x-6 xl:gap-x-3', 'lg', 'accent', '[#fff]', 16)
 					each li, i in menu
 						li(class="")
-							a(href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm")= li
+							a(href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white")= li
 
 		div(class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2 xl:ml-auto")
 			a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1 md:hidden")
