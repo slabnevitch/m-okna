@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		//freeMode: true,// в сочетании с mousewheel дает возможность прокручивать стр-цу. после докручивания слайдера до начала или конца колесом мыши
 		slidesPerView: 1,
 		//spaceBetween: 0,
-		//autoHeight: true,
+		autoHeight: true,
 		speed: 1600,
 		//touchRatio: 0,
 		//simulateTouch: false,
@@ -251,13 +251,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		loop: true,
 	  	watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
 
+
 		pagination: {
-	 		el: '.pagination-count',
-	 		type: 'custom',
-	 		renderCustom: (swiper, current, total) => {
-	 			console.log(current + ' ' + total)
-	 			return `<span class="text-white">${current}</span><span class="text-[#BBBBBB]">/</span><span class="text-[#BBBBBB]">${total}</span>`;
-	 		}
+	 		el: '.swiper-pagination',
+	 		type: 'fraction',
+	 		formatFractionCurrent: function (number) {
+	            return ('0' + number).slice(-2);
+	        },
+	        formatFractionTotal: function (number) {
+	            return ('0' + number).slice(-2);
+	        },
+	        renderFraction: function (currentClass, totalClass) {
+	            return '<span class="text-white ' + currentClass + '"></span>' +
+	                   '<span class="text-[#BBBBBB]"> / </span>' +
+	                   '<span class="text-[#BBBBBB] ' + totalClass + '"></span>';
+	        }
+	 		// renderCustom: (swiper, current, total) => {
+	 		// 	console.log(current + ' ' + total)
+	 		// 	return `<span class="text-white">${current}</span><span class="text-[#BBBBBB]"> / </span><span class="text-[#BBBBBB]">${total}</span>`;
+	 		// }
 	 	},
 
 		// Navigation arrows

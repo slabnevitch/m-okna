@@ -1,12 +1,13 @@
 section
-	div(class="max-w-[1824px] mx-auto")
-		+swiper('hero-swiper', false, false, false)
-			- for (var i=0; i < 3; i++)
+	- let slides = ['Установка мягких окон <div class="text-blue">под ключ за 7 дней</div>', 'Mатериалы <div class="text-blue">с высокой эластичностью</div>', 'Прямые поставки <div class="text-blue">от производителя</div>'];
+	div(class="max-w-[1824px] mx-auto bg-accent")
+		+swiper('hero-swiper', true, false, false)
+			// - for (var i=0; i < 3; i++)
+			- each item, i in slides 
 				div(class="swiper-slide flex bg-accent overflow-hidden md:flex-col")
-					div(class="pt-32 pb-44 w-[50.46%] shrink-0 relative z-[2] xl:pt-20 xl:pb-28 md:w-full md:py-8")
+					div(class="pt-48 pb-44 w-[50.46%] shrink-0 relative z-[2] xl:pt-32 xl:pb-28 md:w-full md:pt-20 md:pb-8")
 						div(class="pagination-count text-2xl font-medium")
-						h2(class="mb-6 text-white xxl:text-5xl xl:text-4xl md:mb-4" data-swiper-parallax="-200") Установка мягких окон 
-							div.text-blue под ключ за 7 дней
+						h2(class="mb-6 text-white xxl:text-5xl xl:text-4xl md:mb-4" data-swiper-parallax="-200")!= item
 
 						div(class="pl-40 lg:px-10")
 							p(data-swiper-parallax="-300" class="text-xl text-white line-height-[calc(30 / 21)] mb-16 md:mb-6 sm:text-sm") Обратившись в нашу компанию Вы гарантировано получите качественные мягкие окна по лучшей цене.
