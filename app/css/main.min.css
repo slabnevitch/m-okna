@@ -1445,6 +1445,9 @@ h2::before {
 .grid-cols-\[repeat\(auto-fit\2c minmax\(320px\2c 1fr\)\)\] {
   grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -1523,6 +1526,10 @@ h2::before {
 .bg-\[\#46B848\] {
   --tw-bg-opacity: 1;
   background-color: rgb(70 184 72 / var(--tw-bg-opacity));
+}
+.bg-\[\#F6F6F6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
 }
 .bg-\[url\(\'\.\.\/img\/hero\/decor\.svg\'\)\] {
   background-image: url('../img/hero/decor.svg');
