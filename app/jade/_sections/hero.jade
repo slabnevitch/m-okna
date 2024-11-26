@@ -1,6 +1,6 @@
-section.shadow-xl.shadow-accent
+section
 	- let slides = ['Установка мягких окон <div class="text-blue">под ключ за 7 дней</div>', 'Mатериалы <div class="text-blue">с высокой эластичностью</div>', 'Прямые поставки <div class="text-blue">от производителя</div>'];
-	div(class="max-w-[1824px] mx-auto bg-accent")
+	div(class="relative z-[2] max-w-[1824px] mx-auto bg-accent")
 		+swiper('hero-swiper', true, false, false)
 			// - for (var i=0; i < 3; i++)
 			- each item, i in slides 

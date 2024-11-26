@@ -1300,6 +1300,9 @@ h2::before {
 .top-0 {
   top: 0px;
 }
+.-top-4 {
+  top: -1rem;
+}
 .z-\[11\] {
   z-index: 11;
 }
@@ -1325,6 +1328,12 @@ h2::before {
 .mt-4 {
   margin-top: 1rem;
 }
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+.mt-auto {
+  margin-top: auto;
+}
 .block {
   display: block;
 }
@@ -1334,8 +1343,14 @@ h2::before {
 .flex {
   display: flex;
 }
+.grid {
+  display: grid;
+}
 .hidden {
   display: none;
+}
+.aspect-\[438\/254\] {
+  aspect-ratio: 438/254;
 }
 .h-10 {
   height: 2.5rem;
@@ -1348,6 +1363,18 @@ h2::before {
 }
 .h-full {
   height: 100%;
+}
+.h-\[78px\] {
+  height: 78px;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-px {
+  height: 1px;
+}
+.h-1 {
+  height: 0.25rem;
 }
 .max-h-full {
   max-height: 100%;
@@ -1376,6 +1403,9 @@ h2::before {
 .w-full {
   width: 100%;
 }
+.w-\[78px\] {
+  width: 78px;
+}
 .max-w-48 {
   max-width: 12rem;
 }
@@ -1387,6 +1417,9 @@ h2::before {
 }
 .max-w-full {
   max-width: 100%;
+}
+.max-w-\[1856px\] {
+  max-width: 1856px;
 }
 .flex-auto {
   flex: 1 1 auto;
@@ -1402,6 +1435,15 @@ h2::before {
 }
 .grow-0 {
   flex-grow: 0;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-\[repeat\(auto-fill\2c minmax\(320px\2c 1fr\)\)\] {
+  grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+}
+.grid-cols-\[repeat\(auto-fit\2c minmax\(320px\2c 1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -1430,6 +1472,18 @@ h2::before {
 .gap-x-9 {
   column-gap: 2.25rem;
 }
+.gap-x-5 {
+  column-gap: 1.25rem;
+}
+.gap-y-14 {
+  row-gap: 3.5rem;
+}
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+.gap-y-2\.5 {
+  row-gap: 0.625rem;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1454,6 +1508,22 @@ h2::before {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-\[\#00AEEF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 174 239 / var(--tw-bg-opacity));
+}
+.bg-\[\#EE008D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 0 141 / var(--tw-bg-opacity));
+}
+.bg-\[\#FFF204\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 242 4 / var(--tw-bg-opacity));
+}
+.bg-\[\#46B848\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 184 72 / var(--tw-bg-opacity));
+}
 .bg-\[url\(\'\.\.\/img\/hero\/decor\.svg\'\)\] {
   background-image: url('../img/hero/decor.svg');
 }
@@ -1475,6 +1545,18 @@ h2::before {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .pb-44 {
   padding-bottom: 11rem;
 }
@@ -1489,6 +1571,9 @@ h2::before {
 }
 .font-medium {
   font-family: "TTTravels-Medium", sans-serif;
+}
+.font-demibold {
+  font-family: "TTTravels-DemiBold", sans-serif;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1542,6 +1627,15 @@ h2::before {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-accent {
+  --tw-shadow-color: #2B2862;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -1789,9 +1883,41 @@ h2::before {
   .sm\:-mr-4 {
     margin-right: -1rem;
   }
+  .sm\:hidden {
+    display: none;
+  }
+  .sm\:aspect-auto {
+    aspect-ratio: auto;
+  }
+  .sm\:h-14 {
+    height: 3.5rem;
+  }
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+  .sm\:items-center {
+    align-items: center;
+  }
+  .sm\:gap-x-4 {
+    column-gap: 1rem;
+  }
+  .sm\:gap-x-2 {
+    column-gap: 0.5rem;
+  }
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media (max-width: 575.98px) {
