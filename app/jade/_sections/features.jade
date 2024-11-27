@@ -1,8 +1,8 @@
-div(class="relative max-w-[1824px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-x-6 gap-y-2.5 mb-14 sm:grid-cols-1")
+div(class="relative max-w-[1824px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-x-6 gap-y-2.5 mb-14 sm:grid-cols-1 sm:mb-5")
 	- var colors = ['#00AEEF', '#FFF204', '#EE008D', '#46B848'];
 	- var items = ['Cобственное <br>производство', 'Прямые поставки <br>от производителя', 'Современное <br>оборудование', 'Современное <br>оборудование'];
 		each item, i in items
-			article(class="flex flex-col gap-y-14 gap-x-5 px-9 py-10 bg-["+colors[i]+"] aspect-[438/254] sm:flex-row sm:aspect-auto sm:items-center sm:px-8 sm:gap-x-2")
+			article(class="flex flex-col gap-y-14 gap-x-5 px-9 py-10 bg-["+colors[i]+"]  sm:flex-row sm:items-center sm:px-8 sm:gap-x-2")
 				div(class="w-[78px] h-[78px] sm:w-17 sm:h-14")
 					img(class="w-full max-h-full" src="img/features/"+(i+1)+".svg" alt="alt")
 

@@ -1,4 +1,15 @@
-div(class="max-w-[1824px] mx-auto bg-accent")
-	div(class="grid grid-cols-3")
-		div(class="")
-			div(class="bg-[#F6F6F6]")
+div(class="max-w-[1824px] mx-auto mb-24 lg:px-4")
+	- let cards = ['Террасы', 'Веранды', 'Беседки'];
+	div(class="grid grid-cols-3 gap-x-6 gap-y-4 lg:grid-cols-2 sm:grid-cols-1")
+		each card, i in cards
+			article(class="flex flex-col bg-white border border-px border-[#E6E6E6]")
+				div(class="shrink-0 grow-0 aspect-[589/354] px-[16.98%] py-[7.64%] flex items-center justify-center bg-[#F6F6F6] sm:py-[6.45%] sm:px-[9.38%] xs:aspect-[288/235] ")
+					img(class="max-w-full max-h-full" src="img/variants/"+(i+1)+".png" alt="alt")
+				
+				div(class="shrink grow flex flex-col items-start pt-14 px-12 pb-11 sm:px-5 sm:py-6")
+					h3(class="mb-5 text-3xl mb5 text-accent font-demibold xs:text-2xl xs:mb-2.5")= card
+					p(class="mb-7 text-base xs:text-sm xs:mb-4") Используем качественные материалы с высокой эластичностью, что исключает провисание окон спустя несколько лет эксплуатации
+
+					a(href="#" class="btn mt-auto")
+						span Заказать
+						span.icon-exit.text-base
