@@ -1,0 +1,21 @@
+section
+	- let mats = ['Пленка ПВХ (прозрачная)', 'Пленка ТПУ (прозрачная)', 'Кант  тентовая ткань ПВХ'];
+
+	div(class="relative max-w-[1824px] mb-20 mx-auto xxl:px-4 sm:mb-10")
+		h2(class="mb-14 sm:mb-8") Используемый материал
+
+		div(class="grid grid-cols-3 gap-x-6 gap-y-4 lg:grid-cols-2 sm:grid-cols-1")
+			each card, i in mats
+				article(class="flex flex-col bg-white border border-px border-[#E6E6E6]")
+					div(class="shrink-0 grow-0 aspect-[589/354] flex items-center justify-center xs:aspect-[285/182]")
+						img(class="object-cover w-full h-full" src="img/material/"+(i+1)+".jpg" alt="alt")
+					
+					div(class="shrink grow flex flex-col items-start pt-14 px-12 pb-11 sm:px-5 sm:py-6")
+						
+						h3(class="mb-5 text-3xl mb5 text-accent font-demibold xs:text-2xl xs:mb-2.5")= card
+						p(class="mb-10 text-base xs:text-sm xs:mb-4") Используем качественные материалы с высокой эластичностью, что исключает провисание окон спустя несколько лет эксплуатации
+
+						div(class="flex items-center justify-between w-full gap-x-4 mt-auto font-demibold")
+							div(class="text-blue text-xl xl:text-sm") 700 микрон
+							div(class="text-blue text-3xl xl:text-xl") от 1200 / м2
+						
