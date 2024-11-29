@@ -1370,6 +1370,12 @@ h2::before {
 .mt-auto {
   margin-top: auto;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.ml-40 {
+  margin-left: 10rem;
+}
 .block {
   display: block;
 }
@@ -1405,6 +1411,9 @@ h2::before {
 }
 .h-full {
   height: 100%;
+}
+.h-\[26\.84\%\] {
+  height: 26.84%;
 }
 .max-h-full {
   max-height: 100%;
@@ -1463,6 +1472,12 @@ h2::before {
 .grow-0 {
   flex-grow: 0;
 }
+.basis-\[36\.18\%\] {
+  flex-basis: 36.18%;
+}
+.basis-auto {
+  flex-basis: auto;
+}
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1517,6 +1532,9 @@ h2::before {
 .gap-y-4 {
   row-gap: 1rem;
 }
+.gap-x-28 {
+  column-gap: 7rem;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1568,8 +1586,14 @@ h2::before {
 .bg-\[url\(\'\.\.\/img\/hero\/decor\.svg\'\)\] {
   background-image: url('../img/hero/decor.svg');
 }
+.bg-\[url\(\'\.\.\/img\/quiz\/decor\.svg\'\)\] {
+  background-image: url('../img/quiz/decor.svg');
+}
 .bg-right-top {
   background-position: right top;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 .bg-repeat-y {
   background-repeat: repeat-y;
@@ -1623,6 +1647,21 @@ h2::before {
 }
 .pt-48 {
   padding-top: 12rem;
+}
+.pb-28 {
+  padding-bottom: 7rem;
+}
+.pr-40 {
+  padding-right: 10rem;
+}
+.pt-32 {
+  padding-top: 8rem;
+}
+.pb-\[269\] {
+  padding-bottom: 269;
+}
+.pb-\[269px\] {
+  padding-bottom: 269px;
 }
 .font-bold {
   font-family: "TTTravels-Bold", sans-serif;
@@ -1815,6 +1854,10 @@ h2::before {
   }
   .lg\:z-\[11\] {
     z-index: 11;
+  }
+  .lg\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
   .lg\:block {
     display: block;
