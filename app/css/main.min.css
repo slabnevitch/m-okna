@@ -1854,10 +1854,6 @@ h2::before {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
   .lg\:pb-\[50px\] {
     padding-bottom: 50px;
   }
