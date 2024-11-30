@@ -16,7 +16,7 @@ function Quiz(selector, tns, sliderOptions, options){
         observeParents: true,
         slidesPerView: 1,
         autoHeight: false,
-       allowTouchMove: false,
+       // allowTouchMove: false,
 
         pagination: {
           el: '.swiper-pagination',
@@ -149,13 +149,15 @@ function Quiz(selector, tns, sliderOptions, options){
         currenBlock = $el.querySelector('.swiper-slide-active');
 		var elements = currenBlock.querySelectorAll('input, textarea');
     if(!currenBlock.hasAttribute('data-quiz-norequired')){
+        console.log("pizda!!")
       //проверяем, есть ли в текущем вопросе выбранные ответы
       elements.forEach(function(el){
+        console.log(el.type + "  " + el.value)
         switch(el.type) {
           case 'textarea':
             (el.value) ? isValid = true : el.closest('label').classList.add('error');
           case 'text':
-            (el.value) ? isValid = true : el.closest('label').classList.add('error');
+            (el.value !== '') ? isValid = true : el.closest('label').classList.add('error');
           case 'checkbox':
             (el.checked) ? isValid = true : el.closest('label').classList.add('error');
           case 'radio':
@@ -166,7 +168,7 @@ function Quiz(selector, tns, sliderOptions, options){
     }else{
       isValid = true;
     }
-
+    console.log('isValid ' + isValid)
 		return isValid;
 	},
     
@@ -232,7 +234,7 @@ function Quiz(selector, tns, sliderOptions, options){
 			var len = form.querySelector('.swiper-slide-active').querySelectorAll('input, textarea').length;
 			for (let i = 0; i < len; i++) {
 				field = form.querySelector('.swiper-slide-active').querySelectorAll('input, textarea')[i];
-				console.log(field)
+				// console.log(field)
 				if (field.name && !field.disabled && field.type != 'file' && field.type != 'reset' && field.type != 'submit' && field.type != 'button') {
 					if (field.type == 'select-multiple') {
 						for (j = form.elements[i].options.length - 1; j >= 0; j--) {

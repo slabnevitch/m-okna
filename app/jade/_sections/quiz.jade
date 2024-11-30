@@ -10,17 +10,17 @@ section(class="")
 			div(class="min-w-0 shrink grow basis-auto pr-40 pb-28" data-quiz)
 				- let data = [{ques: 'Где будут использоваться мягкие окна?', vars: ['Беседка', 'Веранда', 'Навес'], name:'where'}, {ques: 'Выбор материала', vars: ['Пленка ПВХ', 'Плёнка ТПУ', 'Кант тентовая ткань ПВХ'], name:'mats'}];
 					
-				form(data-quiz-form action="#" name="formname" class="quiz-slider swiper-container swiper text-white")
+				form(data-quiz-form action="#" name="formname" class="quiz-slider swiper-container swiper pb-12 text-white")
 					.swiper-wrapper
 						each item, i in data
-							.swiper-slide(data-quiz-block)
+							.swiper-slide.select-none.border.border-white(data-quiz-block)
 								div(class="pt-14")
 									h3(class="mb-11 text-3xl font-demibold leading-[48/32]")= item.ques
 									div(class="grid grid-cols-3 gap-x-6 gap-y-2")
 										each label, n in item.vars
 											label(class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label")
 												
-												input(type="radio" name=item.name checked=n==1?true : false class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0")
+												input(type="radio" name=item.name  class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0")
 													
 												span(class="w-20 h-20 flex justify-center items-center")
 													img(src="img/quiz/"+(i+1)+"/"+(n+1)+".svg" alt="alt")
@@ -40,11 +40,33 @@ section(class="")
 										each item, i in form
 											label.block
 												input(autocomplete="off" type="text" name=item.name class="pb-7 border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0" placeholder=item.label)
+									
+									div(class="relative")
+										label.block.mb-3
+											input(autocomplete="off" type="text" name="message" class="w-full pb-7 border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0" placeholder="Расскажите подробнее")
+
+										div(class="")
+											span.count 0
+											span /
+											span.overal 255
+
+									div(class="mt-12 flex items-start gap-x-[10.74%]")
+										button(data-quiz-send type="submit" class="quiz-next flex items-center gap-x-7 disabled:opacity-40")
+												span(class="text-3xl font-demibold") Отправить
+												span.icon-exit.text-3xl
+
+										div(class="relative flex gap-x-5")
+											label(class="relative")
+												input(type="checkbox" name="check" checked class="peer absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0")
+												span(class="w-6 h-6 flex justify-center items-center bg-white before:left-0 before:top-0 before:w-full before:h-full before:bg-[url('../img/icons-svg/check.svg')] before:bg-center before:bg-no-repeat before:opacity-0 peer-checked:before:opacity-100")
+											
+											span Нажимая на кнопку «Отправить», Вы даете #[a(href="#").underline Cогласие на обработку своих персональных данных]
+					
 					.swiper-pagination
 
 
 
 
-					button(data-quiz-next type="button" class="quiz-next mt-12 flex items-center gap-x-7 disabled:opacity-40")
+					button(data-quiz-next type="button" class="quiz-next absolute left-0 bottom-0 mt-12 flex items-center gap-x-7 disabled:opacity-40")
 						span(class="text-3xl font-demibold") Далее
 						span.icon-arroq-ritght.text-3xl

@@ -36,8 +36,11 @@
 }
 
 .swiper-pagination{
-	@apply bottom-auto text-left text-2xl font-medium md:text-lg;
+	@apply bottom-auto text-left text-2xl font-medium md:text-lg border border-white;
 }
 .hero-swiper .swiper-pagination{
 	@apply left-40 top-32 xl:top-20 lg:left-10 md:top-9;
+}
+.quiz-slider .swiper-pagination{
+	@apply top-0;
 }
