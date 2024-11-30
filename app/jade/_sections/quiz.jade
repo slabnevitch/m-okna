@@ -7,4 +7,34 @@ section(class="")
 					span.block.text-white ваших окон прямо сейчас!
 				p(class="ml-40 text-2xl text-white lg:mx-10") Ответьте на несколько вопросов
 			
-			div(class="shrink grow basis-auto pr-40 pb-28")
+			div(class="shrink grow basis-auto pr-40 pb-28" data-quiz)
+				- let data = [{ques: 'Где будут использоваться мягкие окна?', vars: ['Беседка', 'Веранда', 'Навес'], name:'where'}, {ques: 'Выбор материала', vars: ['Пленка ПВХ', 'Плёнка ТПУ', 'Кант тентовая ткань ПВХ'], name:'mats'}];
+
+				form(data-quiz-form action="#" name="formname" class="quiz-slider swiper-container swiper text-white")
+					.swiper-wrapper
+						each item, i in data
+							.swiper-slide(data-quiz-block)
+								div(class="pt-14")
+									h3(class="mb-11 text-3xl font-demibold leading-[48/32]")= item.ques
+									div(class="grid grid-cols-3 gap-x-6 gap-y-2")
+										each label, n in item.vars
+											label(class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label")
+												
+												input(type="radio" name=item.name checked=n==1?true : false class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0")
+													
+												span(class="w-20 h-20 flex justify-center items-center")
+													img(src="img/quiz/"+(i+1)+"/"+(n+1)+".svg" alt="alt")
+												
+												span(class="mt-auto flex items-center gap-x-4")
+													span(class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100")
+
+													span(class="text-xl")= label
+
+						.swiper-pagination
+
+
+
+
+					button(data-quiz-next type="button" class="quiz-next mt-12 flex items-center gap-x-7 disabled:opacity-40")
+						span(class="text-3xl font-demibold") Далее
+						span.icon-arroq-ritght.text-3xl

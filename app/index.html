@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="group h-full">
+<html lang="ru" class="group/element h-full">
   <head>
     <meta charset="utf-8">
     <title>Главная страница</title>
@@ -25,7 +25,7 @@
             <div class="flex items-center gap-x-12 xl:gap-x-6">
               <div class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 lg:z-[11]"><img src="img/logo.svg" alt="alt" class="w-full"></div>
               <nav class="mt-4 xl:mt-2">
-                    <ul class="flex flex-wrap items-center gap-x-6 xl:gap-x-3 group-[.menu-opened]:right-0 lg:fixed lg:z-10 lg:top-0 lg:-right-[100%] lg:pt-[100px] lg:pb-[50px] lg:flex-col lg:flex-nowrap lg:justify-center lg:items-center lg:gap-y-[2rem] lg:w-full lg:h-full lg:transition-[right] lg:duration-500 lg:overflow-y-auto lg:bg-accent lg:before:fixed lg:before:w-full lg:before:h-16 lg:before:top-0 lg:before:-right-[100%] lg:before:duration-500 lg:before:transition-[right] lg:before:z-2 lg:before:bg-[#fff] group-[.menu-opened]:before:right-0">
+                    <ul class="flex flex-wrap items-center gap-x-6 xl:gap-x-3 group-[.menu-opened]/element:right-0 lg:fixed lg:z-10 lg:top-0 lg:-right-[100%] lg:pt-[100px] lg:pb-[50px] lg:flex-col lg:flex-nowrap lg:justify-center lg:items-center lg:gap-y-[2rem] lg:w-full lg:h-full lg:transition-[right] lg:duration-500 lg:overflow-y-auto lg:bg-accent lg:before:fixed lg:before:w-full lg:before:h-16 lg:before:top-0 lg:before:-right-[100%] lg:before:duration-500 lg:before:transition-[right] lg:before:z-2 lg:before:bg-[#fff] group-[.menu-opened]/element:before:right-0">
                       <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Каталог</a></li>
                       <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Материалы</a></li>
                       <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">FAQ</a></li>
@@ -202,7 +202,46 @@
                 <h2 class="mb-8 text-blue">Рассчитайте стоимость <span class="block text-white">ваших окон прямо сейчас!</span></h2>
                 <p class="ml-40 text-2xl text-white lg:mx-10">Ответьте на несколько вопросов</p>
               </div>
-              <div class="shrink grow basis-auto pr-40 pb-28"></div>
+              <div data-quiz class="shrink grow basis-auto pr-40 pb-28">
+                <form data-quiz-form action="#" name="formname" class="quiz-slider swiper-container swiper text-white">
+                  <div class="swiper-wrapper">
+                    <div data-quiz-block class="swiper-slide">
+                      <div class="pt-14">
+                        <h3 class="mb-11 text-3xl font-demibold leading-[48/32]">Где будут использоваться мягкие окна?</h3>
+                        <div class="grid grid-cols-3 gap-x-6 gap-y-2">
+                          <label class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label">
+                            <input type="radio" name="where" class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-20 h-20 flex justify-center items-center"><img src="img/quiz/1/1.svg" alt="alt"></span><span class="mt-auto flex items-center gap-x-4"><span class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100"></span><span class="text-xl">Беседка</span></span>
+                          </label>
+                          <label class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label">
+                            <input type="radio" name="where" checked class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-20 h-20 flex justify-center items-center"><img src="img/quiz/1/2.svg" alt="alt"></span><span class="mt-auto flex items-center gap-x-4"><span class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100"></span><span class="text-xl">Веранда</span></span>
+                          </label>
+                          <label class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label">
+                            <input type="radio" name="where" class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-20 h-20 flex justify-center items-center"><img src="img/quiz/1/3.svg" alt="alt"></span><span class="mt-auto flex items-center gap-x-4"><span class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100"></span><span class="text-xl">Навес</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-quiz-block class="swiper-slide">
+                      <div class="pt-14">
+                        <h3 class="mb-11 text-3xl font-demibold leading-[48/32]">Выбор материала</h3>
+                        <div class="grid grid-cols-3 gap-x-6 gap-y-2">
+                          <label class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label">
+                            <input type="radio" name="mats" class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-20 h-20 flex justify-center items-center"><img src="img/quiz/2/1.svg" alt="alt"></span><span class="mt-auto flex items-center gap-x-4"><span class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100"></span><span class="text-xl">Пленка ПВХ</span></span>
+                          </label>
+                          <label class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label">
+                            <input type="radio" name="mats" checked class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-20 h-20 flex justify-center items-center"><img src="img/quiz/2/2.svg" alt="alt"></span><span class="mt-auto flex items-center gap-x-4"><span class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100"></span><span class="text-xl">Плёнка ТПУ</span></span>
+                          </label>
+                          <label class="relative h-60 px-7 py-4 flex flex-col gap-y-2.5 border border-px border-white cursor-pointer has-[:checked]:border-blue group/label">
+                            <input type="radio" name="mats" class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-20 h-20 flex justify-center items-center"><img src="img/quiz/2/3.svg" alt="alt"></span><span class="mt-auto flex items-center gap-x-4"><span class="shrink-0 flex items-center justify-center w-6 h-6 border border-white rounded rounded-full before:absolute before:block before:w-3 before:h-3 before:bg-blue before:rounded before:rounded-full before:opacity-0 group-has-[:checked]/label:before:opacity-100"></span><span class="text-xl">Кант тентовая ткань ПВХ</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <button data-quiz-next type="button" class="quiz-next mt-12 flex items-center gap-x-7 disabled:opacity-40"><span class="text-3xl font-demibold">Далее</span><span class="icon-arroq-ritght text-3xl"></span></button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
