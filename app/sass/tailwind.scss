@@ -36,5 +36,8 @@
 }
 
 .swiper-pagination{
-	@apply left-40 top-32 bottom-auto text-left text-2xl font-medium xl:top-20 lg:left-10 md:top-9 md:text-lg;
+	@apply bottom-auto text-left text-2xl font-medium md:text-lg;
+}
+.hero-swiper .swiper-pagination{
+	@apply left-40 top-32 xl:top-20 lg:left-10 md:top-9;
 }

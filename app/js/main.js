@@ -117,6 +117,10 @@ Swiper.use([Navigation, Pagination, Autoplay, Parallax]);
 
 //- VANILLA JS===================================
 //- dynamic-adaptive--------------------------
+import {Quiz} from '~/app/libs-vanilla/quiz/quiz.js';
+console.log(Quiz)
+
+//- dynamic-adaptive--------------------------
 // require('~/app/libs-vanilla/dynamic-adaptive/da(es6).js')
 	
 //- slideout--------------------------
@@ -282,5 +286,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	  });
 	}
 //---------------END Swiper
+	// quiz slider
+	if(document.querySelector('[data-quiz]')){
+		var quiz = new Quiz('[data-quiz]', Swiper, {}, {
+			sendSuccess: function(data){
+				alert("succes " + data)
+			},
+			sendError: function(err){
+				alert(err);
+			}
+		});		
+	}
+	// END quiz slider
 
 }); //DOMContentLoaded

@@ -202,7 +202,7 @@
                 <h2 class="mb-8 text-blue">Рассчитайте стоимость <span class="block text-white">ваших окон прямо сейчас!</span></h2>
                 <p class="ml-40 text-2xl text-white lg:mx-10">Ответьте на несколько вопросов</p>
               </div>
-              <div data-quiz class="shrink grow basis-auto pr-40 pb-28">
+              <div data-quiz class="min-w-0 shrink grow basis-auto pr-40 pb-28">
                 <form data-quiz-form action="#" name="formname" class="quiz-slider swiper-container swiper text-white">
                   <div class="swiper-wrapper">
                     <div data-quiz-block class="swiper-slide">
@@ -237,8 +237,26 @@
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div data-quiz-block class="swiper-slide">
+                      <div class="pt-14">
+                        <h3 class="mb-11 text-3xl font-demibold leading-[48/32]">Оставьте заявку</h3>
+                        <div>
+                          <div class="mb-20 grid grid-cols-3 gap-x-6 gap-y-7">
+                            <label class="block">
+                              <input autocomplete="off" type="text" name="name" placeholder="Ваше имя" class="pb-7 border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0">
+                            </label>
+                            <label class="block">
+                              <input autocomplete="off" type="text" name="mail" placeholder="Электронная почта" class="pb-7 border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0">
+                            </label>
+                            <label class="block">
+                              <input autocomplete="off" type="text" name="phone" placeholder="Телефон" class="pb-7 border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div class="swiper-pagination"></div>
                   <button data-quiz-next type="button" class="quiz-next mt-12 flex items-center gap-x-7 disabled:opacity-40"><span class="text-3xl font-demibold">Далее</span><span class="icon-arroq-ritght text-3xl"></span></button>
                 </form>
               </div>

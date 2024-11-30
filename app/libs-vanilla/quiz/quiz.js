@@ -12,12 +12,37 @@ function Quiz(selector, tns, sliderOptions, options){
       resultArray = [],//массив с результатами выбора в каждом вопросе квиза
 		  tmp = {},//временный объект для хранения результатов выбора ответов в текущем вопросе
       sliderInitOpts = {
-        container: $el,
-        items: 1,
-        loop: false,
-        nav: false,
-        controls: false
-      },
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        autoHeight: false,
+       allowTouchMove: false,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+            return ('0' + number).slice(-2);
+          },
+          formatFractionTotal: function (number) {
+            return ('0' + number).slice(-2);
+          },
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="text-white ' + currentClass + '"></span>' +
+            '<span class="text-blue"> / </span>' +
+            '<span class="text-blue ' + totalClass + '"></span>';
+      }
+      // renderCustom: (swiper, current, total) => {
+      //  console.log(current + ' ' + total)
+      //  return `<span class="text-white">${current}</span><span class="text-[#BBBBBB]"> / </span><span class="text-[#BBBBBB]">${total}</span>`;
+      // }
+    },
+
+    // Navigation arrows
+      // navigation: {
+      //   nextEl: '[data-quiz-next]'
+      // }
+    },
       slider,//tiny-slider
       qiuzLength,//кол-во. слайдов-вопросов в слайдере
       current = 0;//текущий вопрос
@@ -37,8 +62,8 @@ function Quiz(selector, tns, sliderOptions, options){
       }
     }
     
-    slider = tns(sliderInitOpts);
-    qiuzLength = slider.getInfo().slideCount;
+    slider = new tns($el, sliderInitOpts);
+    qiuzLength = slider.slides.length;
   },
   this.events = function() {
     if(next){ next.addEventListener('click', this.nextClick);}
@@ -47,7 +72,7 @@ function Quiz(selector, tns, sliderOptions, options){
     $el.addEventListener('change', this.quizFormChange);
 	},
   this.quizFormChange =  function(e){
-    var currentBlock = $el.querySelector('.tns-slide-active');
+    var currentBlock = $el.querySelector('.swiper-slide-active');
     console.log(currentBlock )
     if (e.target.tagName == 'INPUT' || e.target.tagName == 'TEXTAREA') {
 				if (e.target.type !== 'checkbox' && e.target.type !== 'radio') {//если изменяемый инпут - текстовый, снимаем галочки
@@ -76,13 +101,14 @@ function Quiz(selector, tns, sliderOptions, options){
   this.nextQuestion = function(){
     current++;
     if(current > qiuzLength - 2){
-      next.setAttribute('disabled', true);
+      // next.setAttribute('disabled', true);
+      next.classList.add('hidden');
     }
     if(current > qiuzLength - 1){
       current = qiuzLength - 1; 
     }
     _self.renderIdicators();
-    slider.goTo(current);//прокручиваем к следующему слайду
+    slider.slideTo(current);//прокручиваем к следующему слайду
     _self.progressRender();
   },
     
@@ -96,7 +122,7 @@ function Quiz(selector, tns, sliderOptions, options){
     }
     _self.renderIdicators();//индикаторы соотношения
     next.removeAttribute('disabled');
-    slider.goTo(current);//прокручиваем к предыдущему слайду
+    slider.slideTo(current);//прокручиваем к предыдущему слайду
      _self.progressRender();
   },
   this.renderIdicators = function(){
@@ -106,7 +132,7 @@ function Quiz(selector, tns, sliderOptions, options){
 
   }
   this.removeErrorClass = function(){
-    $el.querySelector('.tns-slide-active').querySelectorAll('label')
+    $el.querySelector('.swiper-slide-active').querySelectorAll('label')
     .forEach(function(el){
 			el.closest('label').classList.remove('error');
 		});
@@ -120,7 +146,7 @@ function Quiz(selector, tns, sliderOptions, options){
   },
   this.valid = function(){
 		var isValid = false,
-        currenBlock = $el.querySelector('.tns-slide-active');
+        currenBlock = $el.querySelector('.swiper-slide-active');
 		var elements = currenBlock.querySelectorAll('input, textarea');
     if(!currenBlock.hasAttribute('data-quiz-norequired')){
       //проверяем, есть ли в текущем вопросе выбранные ответы
@@ -140,14 +166,12 @@ function Quiz(selector, tns, sliderOptions, options){
     }else{
       isValid = true;
     }
-    
+
 		return isValid;
 	},
     
   this.addToSend = function() {//кладем объект с текущими ответами в общий массив
-		 console.log('curretn in addToSend ' + current);
     resultArray[current] = tmp;
-    console.log(resultArray);
 	},
   
   this.send = async function(e) {
@@ -205,9 +229,9 @@ function Quiz(selector, tns, sliderOptions, options){
 		var valueString = '';
 		if (typeof form == 'object' && form.nodeName == "FORM") {
       //вместо form.elements(как в оригинале) берем из текущего вопроса только ипуты
-			var len = form.querySelector('.tns-slide-active').querySelectorAll('input, textarea').length;
+			var len = form.querySelector('.swiper-slide-active').querySelectorAll('input, textarea').length;
 			for (let i = 0; i < len; i++) {
-				field = form.querySelector('.tns-slide-active').querySelectorAll('input, textarea')[i];
+				field = form.querySelector('.swiper-slide-active').querySelectorAll('input, textarea')[i];
 				console.log(field)
 				if (field.name && !field.disabled && field.type != 'file' && field.type != 'reset' && field.type != 'submit' && field.type != 'button') {
 					if (field.type == 'select-multiple') {
@@ -228,14 +252,15 @@ function Quiz(selector, tns, sliderOptions, options){
 	}
   this.init();
 }
+module.exports.Quiz = Quiz;
 // (selector, tns, sliderOptions)
 // tns - ф-ция. tiny-slider
 // sliderOptions - опции tiny-slider, которые нужно добавить к исходным
-var quiz = new Quiz('[data-quiz]', tns, {autoHeight: true}, {
-  sendSuccess: function(data){
-    alert("succes " + data)
-  },
-  sendError: function(err){
-    alert(err);
-  }
-});
+// var quiz = new Quiz('[data-quiz]', Swiper, {autoHeight: true}, {
+//   sendSuccess: function(data){
+//     alert("succes " + data)
+//   },
+//   sendError: function(err){
+//     alert(err);
+//   }
+// });
