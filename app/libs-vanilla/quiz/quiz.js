@@ -62,7 +62,7 @@ function Quiz(selector, tns, sliderOptions, options){
       }
     }
     
-    slider = new tns($el, sliderInitOpts);
+    slider = new tns(document.querySelector('.quiz-slider'), sliderInitOpts);
     qiuzLength = slider.slides.length;
   },
   this.events = function() {
@@ -103,6 +103,7 @@ function Quiz(selector, tns, sliderOptions, options){
     if(current > qiuzLength - 2){
       // next.setAttribute('disabled', true);
       next.classList.add('hidden');
+      document.getElementById('quiz-send-block').classList.remove('hidden');
     }
     if(current > qiuzLength - 1){
       current = qiuzLength - 1; 

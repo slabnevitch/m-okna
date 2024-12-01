@@ -1382,17 +1382,26 @@ h2::before {
 .ml-40 {
   margin-left: 10rem;
 }
-.mt-12 {
-  margin-top: 3rem;
-}
 .mt-2 {
   margin-top: 0.5rem;
+}
+.mt-24 {
+  margin-top: 6rem;
 }
 .mt-4 {
   margin-top: 1rem;
 }
 .mt-auto {
   margin-top: auto;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.mt-14 {
+  margin-top: 3.5rem;
+}
+.mt-16 {
+  margin-top: 4rem;
 }
 .block {
   display: block;
@@ -1444,6 +1453,12 @@ h2::before {
 }
 .h-full {
   height: 100%;
+}
+.h-\[31\.6\%\] {
+  height: 31.6%;
+}
+.h-\[32\%\] {
+  height: 32%;
 }
 .max-h-full {
   max-height: 100%;
@@ -1716,9 +1731,6 @@ h2::before {
 .pb-11 {
   padding-bottom: 2.75rem;
 }
-.pb-12 {
-  padding-bottom: 3rem;
-}
 .pb-28 {
   padding-bottom: 7rem;
 }
@@ -1847,9 +1859,6 @@ h2::before {
 }
 .swiper-pagination {
   bottom: auto;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   text-align: left;
   font-family: "TTTravels-Medium", sans-serif;
   font-size: 1.5rem;
