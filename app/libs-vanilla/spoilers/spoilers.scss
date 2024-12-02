@@ -20,6 +20,9 @@
       // --border-color: #666;
       // position: relative;
     }
+    &.is-open {
+      padding-bottom: 28px;
+    }
   }
 [data-spoiler-title] {
     position: relative;

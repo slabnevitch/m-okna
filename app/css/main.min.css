@@ -774,6 +774,10 @@ button.swiper-pagination-bullet {
 [data-spoiler-item] {
   transition: var(--animation-duration);
 }
+[data-spoiler-item].is-open {
+  padding-bottom: 28px;
+}
+
 [data-spoiler-title] {
   position: relative;
   list-style: none; /* убираем стандартный маркер Firefox */
@@ -1474,9 +1478,6 @@ h2::before{
 .mt-auto{
   margin-top: auto;
 }
-.mt-8{
-  margin-top: 2rem;
-}
 .block{
   display: block;
 }
@@ -1624,11 +1625,11 @@ h2::before{
 .basis-\[36\.18\%\]{
   flex-basis: 36.18%;
 }
-.basis-auto{
-  flex-basis: auto;
-}
 .basis-\[calc\(33\.77\%_-_24px\)\]{
   flex-basis: calc(33.77% - 24px);
+}
+.basis-auto{
+  flex-basis: auto;
 }
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
@@ -1724,14 +1725,6 @@ h2::before{
 .border{
   border-width: 1px;
 }
-.border-y-2{
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-}
-.border-y{
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-}
 .border-b{
   border-bottom-width: 1px;
 }
@@ -1741,6 +1734,10 @@ h2::before{
 .border-t{
   border-top-width: 1px;
 }
+.border-\[\#E2E2E2\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(226 226 226 / var(--tw-border-opacity));
+}
 .border-\[\#E6E6E6\]{
   --tw-border-opacity: 1;
   border-color: rgb(230 230 230 / var(--tw-border-opacity));
@@ -1748,10 +1745,6 @@ h2::before{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.border-\[\#E2E2E2\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(226 226 226 / var(--tw-border-opacity));
 }
 .bg-\[\#00AEEF\]{
   --tw-bg-opacity: 1;
@@ -1851,10 +1844,6 @@ h2::before{
   padding-top: 7.64%;
   padding-bottom: 7.64%;
 }
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .pb-11{
   padding-bottom: 2.75rem;
 }
@@ -1900,17 +1889,8 @@ h2::before{
 .pt-6{
   padding-top: 1.5rem;
 }
-.pb-8{
-  padding-bottom: 2rem;
-}
 .pt-8{
   padding-top: 2rem;
-}
-.pt-5{
-  padding-top: 1.25rem;
-}
-.pb-5{
-  padding-bottom: 1.25rem;
 }
 .text-center{
   text-align: center;
