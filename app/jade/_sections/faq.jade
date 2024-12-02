@@ -1,0 +1,37 @@
+section
+	div(class="relative max-w-[1824px] mx-auto pt-24 pb-28 flex gap-x-6")
+		div(class="shrink-0 basis-[calc(33.77%_-_24px)]")
+			h2(class="mb-24") Ответы 
+				div на частые
+				div вопросы
+		
+			div(class="ml-40 lg:mx-10")
+				div(class="w-full max-w-72 pt-12 px-7 pb-11 bg-accent text-center")
+					div(class="w-44 mb-6 mx-auto aspect-[1/1] rounded-full overflow-hidden")
+						img.object-cover.w-full.h-full(src="img/faq/userpic.jpg" alt="alt")
+		
+				
+					div(class="mb-9 text-white")
+						p(class="mb-1.5 text-base leading-[calc(30/16)]") На вопросы отвечает:
+						div(class="mb-1.5 text-2xl font-demibold") Антон Брилев
+						p(class="text-base leading-[calc(30/16)]") Старший инженер
+
+					a(href="#" class="btn pl-5")
+						span Задать вопрос
+						span.icon-exit
+
+
+
+		div(class="shrink grow")
+			//- data-point="767.98" - выше этой ширины экрана спойлеры будут всегда раскрыты и не будут сворачиваться по клику. Ниже этой ширины спойлеры изначально будут свернуты, а по клику сворачиваться/разворачиваться. Если убрать data-point спойлеры будут рабоать обычным образом
+			//-  data-minimizeSiblings - при наличии этого атрибута при раскрытии одного спойлера все его соседи будут сворачиваться
+			
+			- let titles = ['Какая пленка лучше', 'Различия ТПУ и ПВХ', 'Как правильно подобрать']
+			
+			div(data-spoilers data-minimizeSiblings class="border-t border-[#E2E2E2]")
+				each spol, i in titles
+					details(data-spoiler-item open=i<1?true:false class="py-8 border-b border-[#E2E2E2]")
+						summary(data-spoiler-title='' class=" text-2xl font-demibold")= spol
+						div(data-spoiler-content='' class="mt-8")
+							p(class="text-xl")
+								| HomePro is a home care platform that connects homeowners with professional service providers offering a wide range of home services, including repairs, maintenance, cleaning, and more.

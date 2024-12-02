@@ -136,7 +136,7 @@ console.log(Quiz)
 // require('~/app/libs-vanilla/accordion/vanilla-accordion.js')
 
 //- spoilers-------------------------
-// require('~/app/libs-vanilla/spoilers/spoilers.js')
+require('~/app/libs-vanilla/spoilers/spoilers.js')
 	
 //- tabs--------------------------
 // require('~/app/libs-vanilla/tabs/tabs-pure.js')
