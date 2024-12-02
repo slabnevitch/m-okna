@@ -16,7 +16,7 @@ function Quiz(selector, tns, sliderOptions, options){
         observeParents: true,
         slidesPerView: 1,
         autoHeight: false,
-       // allowTouchMove: false,
+       allowTouchMove: false,
 
         pagination: {
           el: '.swiper-pagination',

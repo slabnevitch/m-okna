@@ -299,4 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	// END quiz slider
 
+	// quiz textarea charcount
+	document.getElementById('quiz-textarea').addEventListener('input', function() {
+	    const maxLength = Number(document.getElementById('quiz-area-overal').textContent);
+	    console.log(this.value.length)
+	    document.getElementById('quiz-area-count').textContent = this.value.length;
+	  });
+	// End quiz textarea charcount
+
 }); //DOMContentLoaded
