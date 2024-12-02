@@ -28,10 +28,30 @@ section
 			
 			- let titles = ['Какая пленка лучше', 'Различия ТПУ и ПВХ', 'Как правильно подобрать']
 			
-			div(data-spoilers data-minimizeSiblings class="border-t border-[#E2E2E2]")
+			div(data-spoilers data-minimizeSiblings class="border-t border-l border-r border-[#E2E2E2]")
 				each spol, i in titles
-					details(data-spoiler-item open=i<1?true:false class="group pt-8  border-b border-[#E2E2E2]")
-						summary(data-spoiler-title='' class="mb-7 text-2xl font-demibold")= spol
-						div(data-spoiler-content='' class="relative")
+					details(data-spoiler-item open=i<1?true:false class="group/details pt-8 pl-7 pr-6  border-b border-[#E2E2E2]")
+						summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white")= spol
+						
+						div(data-spoiler-content='' class="relative pr-28")
 							p(class="text-xl")
-								| HomePro is a home care platform that connects homeowners with professional service providers offering a wide range of home services, including repairs, maintenance, cleaning, and more.
+								| Заказал шторы из полиуретана, отлично сделали ребята, вообще супер, сам не ожидал. Придумывал разные решения себе, но вот оказалось достаточно приемлемо по цене, очень качественно, отработали прекрасно мастера, супер.
+
+				- for (var n=0; n <2 ; n++)
+					each spol, i in titles
+						if i== 0 || i==2
+							details(data-spoiler-item class="group/details pt-8 pl-7 pr-6 border-b border-[#E2E2E2]")
+								summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white")= spol
+								
+								div(data-spoiler-content='' class="relative pr-28")
+									p(class="text-xl")
+										| Заказал шторы из полиуретана, отлично сделали ребята, вообще супер, сам не ожидал. Придумывал разные решения себе, но вот оказалось достаточно приемлемо по цене, очень качественно, отработали прекрасно мастера, супер.
+
+				each spol, i in titles
+					if i==0
+						details(data-spoiler-item class="group/details pt-8 pl-7 pr-6 border-b border-[#E2E2E2]")
+							summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white")=spol
+
+							div(data-spoiler-content='' class="relative pr-28")
+								p(class="text-xl")
+									| Заказал шторы из полиуретана, отлично сделали ребята, вообще супер, сам не ожидал. Придумывал разные решения себе, но вот оказалось достаточно приемлемо по цене, очень качественно, отработали прекрасно мастера, супер.
