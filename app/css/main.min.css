@@ -1391,9 +1391,6 @@ h2::before{
 .top-full{
   top: 100%;
 }
-.top-12{
-  top: 3rem;
-}
 .z-\[11\]{
   z-index: 11;
 }
@@ -1467,9 +1464,6 @@ h2::before{
 .mt-auto{
   margin-top: auto;
 }
-.mr-24{
-  margin-right: 6rem;
-}
 .block{
   display: block;
 }
@@ -1536,12 +1530,6 @@ h2::before{
 .h-full{
   height: 100%;
 }
-.h-32{
-  height: 8rem;
-}
-.h-8{
-  height: 2rem;
-}
 .max-h-full{
   max-height: 100%;
 }
@@ -1586,12 +1574,6 @@ h2::before{
 }
 .w-full{
   width: 100%;
-}
-.w-32{
-  width: 8rem;
-}
-.w-8{
-  width: 2rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -1713,9 +1695,6 @@ h2::before{
 }
 .gap-y-7{
   row-gap: 1.75rem;
-}
-.gap-x-24{
-  column-gap: 6rem;
 }
 .overflow-hidden{
   overflow: hidden;
@@ -1884,6 +1863,9 @@ h2::before{
 .pr-12{
   padding-right: 3rem;
 }
+.pr-28{
+  padding-right: 7rem;
+}
 .pr-40{
   padding-right: 10rem;
 }
@@ -1911,11 +1893,8 @@ h2::before{
 .pt-8{
   padding-top: 2rem;
 }
-.pr-24{
-  padding-right: 6rem;
-}
-.pr-28{
-  padding-right: 7rem;
+.pr-5{
+  padding-right: 1.25rem;
 }
 .text-center{
   text-align: center;
@@ -2203,7 +2182,21 @@ h2::before{
   color: rgb(43 40 98 / var(--tw-text-opacity));
 }
 
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .focus\:outline-0:focus{
+  outline-width: 0px;
+}
+
+.focus-visible\:outline-none:focus-visible{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-visible\:outline-0:focus-visible{
   outline-width: 0px;
 }
 
@@ -2218,18 +2211,6 @@ h2::before{
 .group\/element.menu-opened .group-\[\.menu-opened\]\/element\:before\:right-0::before{
   content: var(--tw-content);
   right: 0px;
-}
-
-.group\/details.is-active .group-\[\.is-active\]\/details\:after\:bg-blue::after{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 180 239 / var(--tw-bg-opacity));
-}
-
-.group.is-active .group-\[\.is-active\]\:after\:bg-blue::after{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 180 239 / var(--tw-bg-opacity));
 }
 
 .group\/details.is-open .group-\[\.is-open\]\/details\:after\:bg-blue::after{
@@ -2291,6 +2272,12 @@ h2::before{
   .xl\:max-w-36{
     max-width: 9rem;
   }
+  .xl\:basis-1\/2{
+    flex-basis: 50%;
+  }
+  .xl\:basis-\[40\%\]{
+    flex-basis: 40%;
+  }
   .xl\:gap-x-1{
     column-gap: 0.25rem;
   }
@@ -2320,6 +2307,9 @@ h2::before{
   }
   .xl\:pt-32{
     padding-top: 8rem;
+  }
+  .xl\:pr-4{
+    padding-right: 1rem;
   }
   .xl\:text-4xl{
     font-size: 2.25rem;
@@ -2462,6 +2452,10 @@ h2::before{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+  .md\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .md\:mb-2{
     margin-bottom: 0.5rem;
   }
@@ -2474,8 +2468,14 @@ h2::before{
   .md\:mb-6{
     margin-bottom: 1.5rem;
   }
+  .md\:mb-9{
+    margin-bottom: 2.25rem;
+  }
   .md\:block{
     display: block;
+  }
+  .md\:inline{
+    display: inline;
   }
   .md\:hidden{
     display: none;
@@ -2495,11 +2495,21 @@ h2::before{
   .md\:max-w-32{
     max-width: 8rem;
   }
+  .md\:max-w-none{
+    max-width: none;
+  }
   .md\:basis-auto{
     flex-basis: auto;
   }
   .md\:flex-col{
     flex-direction: column;
+  }
+  .md\:gap-y-4{
+    row-gap: 1rem;
+  }
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .md\:pb-10{
     padding-bottom: 2.5rem;
@@ -2518,6 +2528,9 @@ h2::before{
   }
   .md\:pt-20{
     padding-top: 5rem;
+  }
+  .md\:pb-0{
+    padding-bottom: 0px;
   }
 }
 
@@ -2673,6 +2686,9 @@ h2::before{
   }
   .xs\:mt-5{
     margin-top: 1.25rem;
+  }
+  .xs\:block{
+    display: block;
   }
   .xs\:hidden{
     display: none;
