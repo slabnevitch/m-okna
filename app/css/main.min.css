@@ -1512,9 +1512,6 @@ h2::before{
 .h-60{
   height: 15rem;
 }
-.h-7{
-  height: 1.75rem;
-}
 .h-\[32\%\]{
   height: 32%;
 }
@@ -1869,6 +1866,9 @@ h2::before{
 .pr-40{
   padding-right: 10rem;
 }
+.pr-5{
+  padding-right: 1.25rem;
+}
 .pr-6{
   padding-right: 1.5rem;
 }
@@ -1892,9 +1892,6 @@ h2::before{
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pr-5{
-  padding-right: 1.25rem;
 }
 .text-center{
   text-align: center;
@@ -2041,6 +2038,12 @@ h2::before{
 
 .quiz-slider .swiper-pagination{
   top: 0px;
+}
+
+.error{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(236 72 153 / var(--tw-border-opacity));
 }
 
 .before\:absolute::before{
@@ -2196,10 +2199,6 @@ h2::before{
   outline-offset: 2px;
 }
 
-.focus-visible\:outline-0:focus-visible{
-  outline-width: 0px;
-}
-
 .disabled\:opacity-40:disabled{
   opacity: 0.4;
 }
@@ -2272,9 +2271,6 @@ h2::before{
   .xl\:max-w-36{
     max-width: 9rem;
   }
-  .xl\:basis-1\/2{
-    flex-basis: 50%;
-  }
   .xl\:basis-\[40\%\]{
     flex-basis: 40%;
   }
@@ -2299,6 +2295,9 @@ h2::before{
   .xl\:pb-28{
     padding-bottom: 7rem;
   }
+  .xl\:pr-4{
+    padding-right: 1rem;
+  }
   .xl\:pr-8{
     padding-right: 2rem;
   }
@@ -2307,9 +2306,6 @@ h2::before{
   }
   .xl\:pt-32{
     padding-top: 8rem;
-  }
-  .xl\:pr-4{
-    padding-right: 1rem;
   }
   .xl\:text-4xl{
     font-size: 2.25rem;
@@ -2448,13 +2444,13 @@ h2::before{
   .md\:right-auto{
     right: auto;
   }
-  .md\:mx-10{
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
   .md\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
+  }
+  .md\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
   .md\:mb-2{
     margin-bottom: 0.5rem;
@@ -2511,6 +2507,9 @@ h2::before{
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .md\:pb-0{
+    padding-bottom: 0px;
+  }
   .md\:pb-10{
     padding-bottom: 2.5rem;
   }
@@ -2528,9 +2527,6 @@ h2::before{
   }
   .md\:pt-20{
     padding-top: 5rem;
-  }
-  .md\:pb-0{
-    padding-bottom: 0px;
   }
 }
 

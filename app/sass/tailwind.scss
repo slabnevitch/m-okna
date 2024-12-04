@@ -44,3 +44,7 @@
 .quiz-slider .swiper-pagination{
 	@apply top-0;
 }
+.error{
+	// @apply outline outline-1 outline-pink-500;
+	@apply border border-pink-500;
+}

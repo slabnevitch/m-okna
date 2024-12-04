@@ -148,9 +148,13 @@ function Quiz(selector, tns, sliderOptions, options){
   this.valid = function(){
 		var isValid = false,
         currenBlock = $el.querySelector('.swiper-slide-active');
-		var elements = currenBlock.querySelectorAll('input, textarea');
+		var elements = Array.from(currenBlock.querySelectorAll('input, textarea'));
+    
+    if(current > qiuzLength - 2){
+      elements.push(document.querySelector('#quiz-send-block input'));
+    }
+    console.log(elements)
     if(!currenBlock.hasAttribute('data-quiz-norequired')){
-        console.log("pizda!!")
       //проверяем, есть ли в текущем вопросе выбранные ответы
       elements.forEach(function(el){
         console.log(el.type + "  " + el.value)
@@ -158,7 +162,8 @@ function Quiz(selector, tns, sliderOptions, options){
           case 'textarea':
             (el.value) ? isValid = true : el.closest('label').classList.add('error');
           case 'text':
-            (el.value !== '') ? isValid = true : el.closest('label').classList.add('error');
+            (el.value) ? isValid = true : el.closest('label').classList.add('error');
+            break;
           case 'checkbox':
             (el.checked) ? isValid = true : el.closest('label').classList.add('error');
           case 'radio':
