@@ -1,7 +1,11 @@
 section
-	div(class="relative max-w-[1824px] mx-auto pt-24 pb-28 flex gap-x-6 md:flex-col md:gap-y-4 md:pt-12 md:pb-0")
+	div(class="relative max-w-[1824px] mx-auto pt-24 pb-28 flex gap-x-6 md:flex-col md:gap-y-4 md:pt-12 md:pb-10 md:flex-col-reverse")
+		h2(class="mb-24 md:mb-9 hidden md:block md:order-2") Ответы 
+				div(class="md:inline xs:block") на частые
+				div(class="md:inline xs:block") вопросы
+		
 		div(class="shrink-0 basis-[calc(33.77%_-_24px)] xl:basis-[40%] md:basis-auto")
-			h2(class="mb-24 md:mb-9") Ответы 
+			h2(class="mb-24 md:mb-9 md:hidden") Ответы 
 				div(class="md:inline xs:block") на частые
 				div(class="md:inline xs:block") вопросы
 		
@@ -30,8 +34,8 @@ section
 			
 			div(data-spoilers data-minimizeSiblings class="border-t border-l border-r border-[#E2E2E2]")
 				each spol, i in titles
-					details(data-spoiler-item open=i<1?true:false class="group/details pt-8 pl-7 pr-6  border-b border-[#E2E2E2]")
-						summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white sm:text-base")= spol
+					details(data-spoiler-item open=i<1?true:false class="group/details pt-8 pl-7 pr-6  border-b border-[#E2E2E2] xs:px-5 xs:pt-6")
+						summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white sm:text-base xs:gap-x-3  xs:after:border xs:after:border-[#EEEEEE]")= spol
 						
 						div(data-spoiler-content='' class="relative pr-28 md:pr-0")
 							p(class="text-xl sm:text-sm")
@@ -40,8 +44,8 @@ section
 				- for (var n=0; n <2 ; n++)
 					each spol, i in titles
 						if i== 0 || i==2
-							details(data-spoiler-item class="group/details pt-8 pl-7 pr-6 border-b border-[#E2E2E2]")
-								summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white sm:text-base")= spol
+							details(data-spoiler-item class="group/details pt-8 pl-7 pr-6 border-b border-[#E2E2E2] xs:px-5 xs:pt-6")
+								summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white sm:text-base xs:gap-x-3 xs:after:border xs:after:border-[#EEEEEE]")= spol
 								
 								div(data-spoiler-content='' class="relative pr-28 md:pr-0")
 									p(class="text-xl sm:text-sm")
@@ -49,8 +53,8 @@ section
 
 				each spol, i in titles
 					if i==0
-						details(data-spoiler-item class="group/details pt-8 pl-7 pr-6 border-b border-[#E2E2E2]")
-							summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white sm:text-base")=spol
+						details(data-spoiler-item class="group/details pt-8 pl-7 pr-6 border-b border-[#E2E2E2] xs:px-5 xs:pt-6")
+							summary(data-spoiler-title='' class="flex items-center justify-between mb-6 text-2xl font-demibold after:w-8 after:h-8 after:rounded-full after:content-['+'] after:flex after:items-center after:justify-center after:text-xl after:font-demibold after:transition-colors group-[.is-open]/details:after:bg-blue group-[.is-open]/details:after:content-['-'] group-[.is-open]/details:after:text-white sm:text-base xs:gap-x-3 xs:text-base xs:after:border xs:after:border-[#EEEEEE]")=spol
 
 							div(data-spoiler-content='' class="relative pr-28 md:pr-0")
 								p(class="text-xl sm:text-sm")
