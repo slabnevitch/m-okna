@@ -1,14 +1,31 @@
 section
-	div(class="max-w-cont px-8 mx-auto")
-		div(class="mb-16 flex items-center justify-between gap-x-6")
+	div(class="max-w-cont px-8 mx-auto xxl:px-4")
+		div(class="mb-16 flex items-center justify-between gap-x-6 sm:mb-7")
 			h2(class="") Примеры работ
 
-			div(class="flex")
-				button(type="button" class=" w-16 flex items-center justify-center border border-px border-[#D9D9D9] border-r-0 text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
+			div(class="flex xs:hidden")
+				button(type="button" class="examples-prev w-16 flex items-center justify-center border border-px border-[#D9D9D9] border-r-0 text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
 					span.icon-arrow-left
 
-				button(type="button" class="aspect-square w-16 flex items-center justify-center border border-px border-[#D9D9D9] text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
+				button(type="button" class="examples-next aspect-square w-16 flex items-center justify-center border border-px border-[#D9D9D9] text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
 					span.icon-arroq-ritght
 
 
-	div(class="max-w-cont px-8 mx-auto")
+	div(class="max-w-cont px-8 mx-auto xxl:px-4")
+		div(id="examples-slider" class="")
+				+swiper('my-swiper', false, false, false)
+					- for (var n=0; n < 2; n++)
+						- for (var i=0; i < 8; i++)
+							div(class="swiper-slide")
+								div(class="aspect-[438/295] mb-6")
+									img(src="img/examples/"+(i+1)+".jpg" alt="alt")
+
+								p(class="tex-xl") Беседка уличная 120 кв.м.
+
+		div(class="mt-7 flex hidden xs:flex")
+			button(type="button" class="examples-prev w-16 flex items-center justify-center border border-px border-[#D9D9D9] border-r-0 text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
+				span.icon-arrow-left
+
+			button(type="button" class="examples-next aspect-square w-16 flex items-center justify-center border border-px border-[#D9D9D9] text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
+				span.icon-arroq-ritght
+

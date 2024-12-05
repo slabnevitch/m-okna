@@ -7,8 +7,8 @@
 
 // Swiper----------------------------
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay, Parallax} from 'swiper/modules';
-Swiper.use([Navigation, Pagination, Autoplay, Parallax]);
+import { Navigation, Pagination, Autoplay, Parallax, Grid} from 'swiper/modules';
+Swiper.use([Navigation, Pagination, Autoplay, Parallax, Grid]);
 
 // Lazysizes--------------------------
 // import 'lazysizes'; //основной скрипт
@@ -227,31 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	if(document.querySelector('.hero-swiper') !== null){
 		var swiper = new Swiper('.hero-swiper', {
 
-		// effect: 'fade',
-		// fadeEffect: {//при отсутствии плавного перехода - расскомментировать соотв-ю. строку в adjustment.scss
-		//     crossFade: true
-		//   },
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
 		parallax: {
 			enabled: true
 		},
 		observer: true,
 		observeParents: true,
-
-		//freeMode: true,// в сочетании с mousewheel дает возможность прокручивать стр-цу. после докручивания слайдера до начала или конца колесом мыши
-		slidesPerView: 1,
-		//spaceBetween: 0,
 		autoHeight: true,
 		speed: 1600,
-		//touchRatio: 0,
-		//simulateTouch: false,
-		//loop: true,
-		//preloadImages: false,
-		//lazy: true,
-		  // direction: 'vertical',
 		loop: true,
 	  	watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
 
@@ -285,6 +267,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  });
 	}
+
+	//---------------Swiper
+if(document.querySelector('#examples-slider .my-swiper') !== null){
+  var swiper = new Swiper('#examples-slider .my-swiper', {
+	observer: true,
+	observeParents: true,
+
+	slidesPerView: 4,
+	spaceBetween: 24,
+	grid: {
+		fill: 'row',
+	    rows: 2,
+	  },
+	  // loop: true,
+	  watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
+	  breakpoints: {
+	    // when window width is >= 320px
+	    320: {
+	    	slidesPerView: 2,
+	    	spaceBetween: 16,
+	    	grid: {
+			    fill: 'row',
+			    rows: 3,
+			},
+	    },
+	    // when window width is >= 480px
+	    767.98: {
+	    	slidesPerView: 3,
+	    	spaceBetween: 24,
+	    	grid: {
+	    		fill: 'row',
+			    rows: 2,
+			},
+	    },
+	    // when window width is >= 640px
+	    1199.98: {
+	    	slidesPerView: 4
+	    }
+	},
+
+
+	  // Navigation arrows
+	  navigation: {
+	  	nextEl: '.examples-next',
+	  	prevEl: '.examples-prev',
+	  },
+
+
+		});
+	}
+
+
 //---------------END Swiper
 	// quiz slider
 	if(document.querySelector('[data-quiz]')){

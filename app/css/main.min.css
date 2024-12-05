@@ -1464,6 +1464,9 @@ h2::before{
 .mt-auto{
   margin-top: auto;
 }
+.mt-7{
+  margin-top: 1.75rem;
+}
 .block{
   display: block;
 }
@@ -1481,6 +1484,9 @@ h2::before{
 }
 .aspect-\[1\/1\]{
   aspect-ratio: 1/1;
+}
+.aspect-\[438\/295\]{
+  aspect-ratio: 438/295;
 }
 .aspect-\[589\/354\]{
   aspect-ratio: 589/354;
@@ -1726,6 +1732,10 @@ h2::before{
 .border-t{
   border-top-width: 1px;
 }
+.border-\[\#D9D9D9\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(217 217 217 / var(--tw-border-opacity));
+}
 .border-\[\#E2E2E2\]{
   --tw-border-opacity: 1;
   border-color: rgb(226 226 226 / var(--tw-border-opacity));
@@ -1737,10 +1747,6 @@ h2::before{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.border-\[\#D9D9D9\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(217 217 217 / var(--tw-border-opacity));
 }
 .bg-\[\#00AEEF\]{
   --tw-bg-opacity: 1;
@@ -1839,10 +1845,6 @@ h2::before{
 .py-\[7\.64\%\]{
   padding-top: 7.64%;
   padding-bottom: 7.64%;
-}
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
 }
 .pb-11{
   padding-bottom: 2.75rem;
@@ -1961,6 +1963,10 @@ h2::before{
 .leading-\[calc\(30\/16\)\]{
   line-height: calc(30 / 16);
 }
+.text-\[\#53545D\]{
+  --tw-text-opacity: 1;
+  color: rgb(83 84 93 / var(--tw-text-opacity));
+}
 .text-\[\#BBBBBB\]{
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity));
@@ -1976,14 +1982,6 @@ h2::before{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-\[\#D9D9D9\]{
-  --tw-text-opacity: 1;
-  color: rgb(217 217 217 / var(--tw-text-opacity));
-}
-.text-\[\#53545D\]{
-  --tw-text-opacity: 1;
-  color: rgb(83 84 93 / var(--tw-text-opacity));
 }
 .underline{
   text-decoration-line: underline;
@@ -2057,6 +2055,10 @@ h2::before{
 
 .quiz-slider .swiper-pagination{
   top: 0px;
+}
+
+#examples-slider .swiper-grid > .swiper-wrapper{
+  row-gap: 1.25rem;
 }
 
 .error{
@@ -2532,9 +2534,6 @@ h2::before{
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .md\:pb-0{
-    padding-bottom: 0px;
-  }
   .md\:pb-10{
     padding-bottom: 2.5rem;
   }
@@ -2580,6 +2579,9 @@ h2::before{
   .sm\:mt-0{
     margin-top: 0px;
   }
+  .sm\:mb-7{
+    margin-bottom: 1.75rem;
+  }
   .sm\:hidden{
     display: none;
   }
@@ -2609,9 +2611,6 @@ h2::before{
   }
   .sm\:flex-col{
     flex-direction: column;
-  }
-  .sm\:flex-col-reverse{
-    flex-direction: column-reverse;
   }
   .sm\:items-center{
     align-items: center;
@@ -2711,11 +2710,11 @@ h2::before{
   .xs\:mt-5{
     margin-top: 1.25rem;
   }
-  .xs\:mb-7{
-    margin-bottom: 1.75rem;
-  }
   .xs\:block{
     display: block;
+  }
+  .xs\:flex{
+    display: flex;
   }
   .xs\:hidden{
     display: none;
@@ -2732,11 +2731,11 @@ h2::before{
   .xs\:gap-x-2{
     column-gap: 0.5rem;
   }
-  .xs\:gap-x-5{
-    column-gap: 1.25rem;
-  }
   .xs\:gap-x-3{
     column-gap: 0.75rem;
+  }
+  .xs\:gap-x-5{
+    column-gap: 1.25rem;
   }
   .xs\:bg-\[url\(\'\.\.\/img\/hero\/decor-mob\.svg\'\)\]{
     background-image: url('../img/hero/decor-mob.svg');
@@ -2744,9 +2743,6 @@ h2::before{
   .xs\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-  .xs\:pt-7{
-    padding-top: 1.75rem;
   }
   .xs\:pt-6{
     padding-top: 1.5rem;
