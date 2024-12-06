@@ -1,0 +1,21 @@
+section(class="pb-24 md:pb-12")
+	div(class="max-w-[1824px] mx-auto xxl:px-4")
+		div(class="flex gap-x-[10.53%] gap-x-9 md:flex-col md:gap-y-9")
+			div(class="grow shrink basis-auto")
+				h2(class="mb-14 md:mb-6") О компании и производстве
+				- let ps = ['Используем качественные материалы с высокой эластичностью, что исключает провисание окон спустя несколько лет эксплуатации', 'Мы уверены в качестве нашей работы, поэтому даем гарантию на мягкие окна до 3 лет Используем профессиональное оборудование и качественные материалы при производстве мягких окон, что гарантирует идеальный результат'];
+
+				div(class="grid gap-y-9 pl-40 lg:pl-0 md:gap-y-6")
+					- for (var i=0; i < 2; i++)
+						each item in ps
+							p(class="text-2xl sm:text-sm")= item
+
+			div(class="basis-[428px] grow-0 shrink-0 md:basis-auto")
+				- let huyata = ['Предварительный расчет и выезд мастера замерщика на объект', 'Изготовление прозрачных полотен для будущих мягких окон', 'Выезд бригады установка фурнитуры подгонка и оптимальная натяжка'];
+
+					div(class="grid gap-y-11 md:gap-y-6")
+						each dat, i in huyata
+							div(class="grid gap-y-6 md:gap-y-2")
+								div(class="text-blue text-6xl font-demibold md:text-5xl")= "0" + (i+1)
+								p(class="text-xl sm:text-sm")= dat
+
