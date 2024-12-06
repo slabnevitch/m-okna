@@ -1,4 +1,4 @@
-section
+section(class="mb-24 md:mb-12")
 	div(class="max-w-cont px-8 mx-auto xxl:px-4")
 		div(class="mb-16 flex items-center justify-between gap-x-6 sm:mb-7")
 			h2(class="") Примеры работ
@@ -16,9 +16,17 @@ section
 				+swiper('my-swiper', false, false, false)
 					- for (var n=0; n < 2; n++)
 						- for (var i=0; i < 8; i++)
-							div(class="swiper-slide")
-								div(class="aspect-[438/295] mb-6 sm:mb-4")
-									img(src="img/examples/"+(i+1)+".jpg" alt="alt")
+							div(class="swiper-slide ")
+								
+								div(class="group/example relative aspect-[438/295] cursor-pointer mb-6 sm:mb-4 xs:aspect-[136/132]" data-graph-path=i)
+									
+									div(class="absolute w-full h-full left-0 right-0 z-[2] bg-black/[.54] transition-opacity opacity-0 group-hover/example:opacity-100")
+										
+										div(class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-16 h-16 bg-[#969696]/75 rounded-full")
+											
+											div(class="absolute flex items-center justify-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 bg-white/75 rounded-full text-accent text-3xl font-medium") +
+									
+									img.w-full.h-full.object-cover(src="img/examples/"+(i+1)+".jpg" alt="alt")
 
 								p(class="tex-xl sm:text-xs") Беседка уличная 120 кв.м.
 
@@ -29,18 +37,40 @@ section
 			button(type="button" class="examples-next aspect-square w-16 flex items-center justify-center border border-px border-[#D9D9D9] text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
 				span.icon-arroq-ritght
 
-.graph-modal
-	div(class="graph-modal__container w-full max-w-[1208px] bg-white" role='dialog', aria-modal='true', data-graph-target='first')
-		button(class="graph-modal__close js-modal-close w-16 h-16 -top-8 -right-8 flex items-center justify-center bg-accent bg-none" aria-label='Закрыть модальное окно')
-			span(class="text-6xl text-white -rotate-45") +
+div(class="graph-modal justify-center bg-accent/95")
+	- for (var i=0; i < 8; i++)
+		div(class="graph-modal__container max-w-[1208px] bg-white xxl:mx-10 lg:max-w-[90%]" role='dialog', aria-modal='true', data-graph-target=i)
+			button(class="graph-modal__close js-modal-close w-16 h-16 -top-8 -right-8 flex items-center justify-center bg-accent bg-none" aria-label='Закрыть модальное окно')
+				span(class="text-6xl text-white -rotate-45") +
 
-		div(class="graph-modal__content pt-16 pb-24")
-			h2(class="pr-40 mb-16") Примеры работ
-			div(class="px-40")
-				div(class="aspect-[900/511] mb-10")
-					img(class="w-full h-full object-cover" src="img/examples/1.jpg" alt="alt")
-				
-				h3(class="mb-6 text-4xl font-demibold") Беседка уличная 120 кв.м.
+			div(class="graph-modal__content pt-16 pb-24 md:pt-8 md:pb-8")
+				h2(class="pr-40 mb-16 lg:pr-10 md:mb-8") Примеры работ
+				div(class="px-40 lg:px-10")
+					div(class="aspect-[900/511] mb-10 md:mb-8")
+						img(class="w-full h-full object-cover" src="img/examples/"+(i+1)+".jpg" alt="alt")
+					
+					h3(class="mb-6 text-4xl font-demibold md:text-2xl sm:mb-3 sm:text-lg") Беседка уличная 120 кв.м.
 
-				p(class="mb-12 text-xl") Используем качественные материалы с высокой эластичностью, что исключает провисание окон спустя несколько лет эксплуатации
+					p(class="mb-12 text-xl md:mb-6 sm:text-base") Используем качественные материалы с высокой эластичностью, что исключает провисание окон спустя несколько лет эксплуатации
+
+					+swiper('in-modal-swiper', false, false, false)
+						- for (var i=0; i < 8; i++)
+							div(class="swiper-slide ")
+								
+								div(data-gall="myGallery" data-href="img/examples/"+(i+1)+".jpg" class="venobox-item group/example relative aspect-[438/295] cursor-pointer mb-6 sm:mb-4")
+									
+									div(class="absolute w-full h-full left-0 right-0 z-[2] bg-black/[.54] transition-opacity opacity-0 group-hover/example:opacity-100")
+										
+										div(class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-16 h-16 bg-[#969696]/75 rounded-full")
+											
+											div(class="absolute flex items-center justify-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 bg-white/75 rounded-full text-accent text-3xl font-medium") +
+									
+									img.w-full.h-full.object-cover(src="img/examples/"+(i+1)+".jpg" alt="alt")
+
+					div(class="w-full justify-end flex")
+						button(type="button" class="in-modal-prev w-16 flex items-center justify-center border border-px border-[#D9D9D9] border-r-0 text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
+							span.icon-arrow-left
+
+						button(type="button" class="in-modal-next aspect-square w-16 flex items-center justify-center border border-px border-[#D9D9D9] text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
+							span.icon-arroq-ritght
 

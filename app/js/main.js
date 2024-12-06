@@ -156,7 +156,7 @@ require('/app/libs-vanilla/graph-modal/dist/graph-modal.min.js')
 // модалка для всех видов содержимого - inline, iframe, photo
 // Внимание! Копирует, исходное содержимоев  модалку в режиме inline, поэтому не подходит для отправки форм через onsubmit!
 // Лучше вообще не использовать для форм.
-// var VenoBox = require('~/app/libs-vanilla/VenoBox/dist/venobox.js')
+var VenoBox = require('~/app/libs-vanilla/VenoBox/dist/venobox.js')
 	
 //- swiper--------------------------
 // const Swiper = require('~/app/libs-vanilla/swiper/swiper-bundle.min.js')
@@ -342,17 +342,52 @@ if(document.querySelector('#examples-slider .my-swiper') !== null){
 	// End quiz textarea charcount
 
 	if(document.querySelector('.graph-modal') !== null){
-		var examplesModal = new GraphModal({
-			isOpen: (modal) => {
-				
+		var myGallery = new VenoBox({
+			selector: '.venobox-item',
+			spinner: 'rotating-plane',
+			// fitView: true, // отключение прокрутки вниз больших изображений 
+			// maxWidth: '44.53%', // max размер фото в % от viewport
+			// customClass: 'myClass' // свой класс для стилизации отдельных модалок
+			onPreOpen: function(obj){
+				// document.querySelector('#wrapper-for-scroll-fix').classList.add('modal-open');
 			},
-			isClose: () => {
-				console.log('closed');
+			onPostOpen: function(obj, gallIndex, thenext, theprev){
+
+			},
+			onPreClose: function(obj, gallIndex, thenext, theprev){
+				// document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
 			}
 		});
-		// document.querySelector('selector').addEventListener('click', () => {
-			examplesModal.open('first'); // 'first' - значение аттрибута data-graph-target в макете модалки
-		// });
+
+		var inModalSwiper;
+		var examplesModal = new GraphModal({
+			isOpen: (modal) => {
+				inModalSwiper = new Swiper(modal.modalContainer.querySelector('.in-modal-swiper'), {
+					observer: true,
+					observeParents: true,
+					slidesPerView: 2,
+					spaceBetween: 24,
+					  // loop: true,
+					  watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
+					  breakpoints: {
+					    // when window width is >= 320px
+	
+					    // when window width is >= 480px
+					    767.98: {
+					    	slidesPerView: 3
+					    }
+					},
+					  // Navigation arrows
+					  navigation: {
+					  	nextEl: '.in-modal-next',
+					  	prevEl: '.in-modal-prev',
+					  }
+				});
+			},
+			isClose: () => {
+				inModalSwiper.destroy();
+			}
+		});
 	}
 
 }); //DOMContentLoaded

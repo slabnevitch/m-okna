@@ -46,11 +46,11 @@ html {
   display: none;
 }
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
   .graph-modal__container {
     width: 90%;
   }
-}
+}*/
 
 .graph-modal__close {
   position: absolute;
