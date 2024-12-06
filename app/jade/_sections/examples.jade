@@ -17,7 +17,7 @@ section
 					- for (var n=0; n < 2; n++)
 						- for (var i=0; i < 8; i++)
 							div(class="swiper-slide")
-								div(class="aspect-[438/295] mb-6 sm:mb-2.5")
+								div(class="aspect-[438/295] mb-6 sm:mb-4")
 									img(src="img/examples/"+(i+1)+".jpg" alt="alt")
 
 								p(class="tex-xl sm:text-xs") Беседка уличная 120 кв.м.
@@ -28,4 +28,19 @@ section
 
 			button(type="button" class="examples-next aspect-square w-16 flex items-center justify-center border border-px border-[#D9D9D9] text-[#53545D] text-xs transition-colors hover:bg-white hover:text-accent xs:w-10 xs:text-xs")
 				span.icon-arroq-ritght
+
+.graph-modal
+	div(class="graph-modal__container w-full max-w-[1208px] bg-white" role='dialog', aria-modal='true', data-graph-target='first')
+		button(class="graph-modal__close js-modal-close w-16 h-16 -top-8 -right-8 flex items-center justify-center bg-accent bg-none" aria-label='Закрыть модальное окно')
+			span(class="text-6xl text-white -rotate-45") +
+
+		div(class="graph-modal__content pt-16 pb-24")
+			h2(class="pr-40 mb-16") Примеры работ
+			div(class="px-40")
+				div(class="aspect-[900/511] mb-10")
+					img(class="w-full h-full object-cover" src="img/examples/1.jpg" alt="alt")
+				
+				h3(class="mb-6 text-4xl font-demibold") Беседка уличная 120 кв.м.
+
+				p(class="mb-12 text-xl") Используем качественные материалы с высокой эластичностью, что исключает провисание окон спустя несколько лет эксплуатации
 

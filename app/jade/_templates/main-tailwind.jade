@@ -31,9 +31,8 @@ html(lang='ru' class="group/element h-full")
 		include ../_misc/_mixins
 		include ../_misc/_vars
 
-		div(class="flex min-h-full flex-col overflow-hidden supports-[overflow: clip]:overflow-clip")
-			header.shrink-0.grow-0
-				include ../_sections/header
+		div(class="flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip")
+			include ../_sections/header
 			main(class="flex-auto shrink-1 grow-1")
 				block content
 			footer.shrink-0.grow-0

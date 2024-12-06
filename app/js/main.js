@@ -150,7 +150,7 @@ require('~/app/libs-vanilla/spoilers/spoilers.js')
 
 //- GraphModal--------------------------
 // не требует подключения scrollWidth(фикс прыгания стр-цы. при открытии модалки)
-// require('/app/libs-vanilla/graph-modal/dist/graph-modal.min.js')
+require('/app/libs-vanilla/graph-modal/dist/graph-modal.min.js')
 
 //- VenoBox--------------------------
 // модалка для всех видов содержимого - inline, iframe, photo
@@ -340,5 +340,19 @@ if(document.querySelector('#examples-slider .my-swiper') !== null){
 	    document.getElementById('quiz-area-count').textContent = this.value.length;
 	  });
 	// End quiz textarea charcount
+
+	if(document.querySelector('.graph-modal') !== null){
+		var examplesModal = new GraphModal({
+			isOpen: (modal) => {
+				
+			},
+			isClose: () => {
+				console.log('closed');
+			}
+		});
+		// document.querySelector('selector').addEventListener('click', () => {
+			examplesModal.open('first'); // 'first' - значение аттрибута data-graph-target в макете модалки
+		// });
+	}
 
 }); //DOMContentLoaded
