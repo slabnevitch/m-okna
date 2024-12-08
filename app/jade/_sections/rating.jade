@@ -1,0 +1,25 @@
+section(class="pb-28 md:pb-16")
+	div(class="max-w-[1824px] mx-auto xxl:px-4")
+		div(class="mb-16 flex items-center justify-between gap-x-6 sm:mb-7")
+			h2(class="") Рейтинги независимых сервисов
+		
+		- let rats = [{val: '4,6', label: 'Яндекс Карты', bg: '#F4E3E3'}, {val: '5,0', label: 'Google Карты', bg: '#BFECFB'}, {val: '4,8', label: '2гис', bg: '#DAF1CC'}];
+		
+		div(class="grid grid-cols-3 gap-x-6 gap-y-4 xl:grid-cols-2 md:grid-cols-1")
+			each rat, i in rats
+				a(href="#" class="py-14 px-10 grid grid-cols-[auto_1fr_38px] items-center gap-x-6 gap-y-4 bg-["+rat.bg+"] xs:grid-rows-2 xs:p-6")
+					div(class="text-6xl font-demibold xs:col-start-1 xs:col-span-1 xs:row-start-1 xs:row-span-1 xs:text-4xl")= rat.val
+					div(class="xs:col-start-1 xs:col-span-3 xs:row-start-2 xs:row-span-1")
+						div(class="flex items-center gap-x-3.5")
+							div(class="shrink-0 w-6")
+								img.max-w-full.max-h-full(src="img/rating/"+(i+1)+".svg" alt="alt")
+							
+
+							div(class="text-2xl font-demibold text-[#373737]")= rat.label
+						
+						div(class="pl-10 mt-2.5 flex items-center gap-x-2.5")
+							div(class="flex gap-x-2.5 text-lg text-[#636363]") 692 отзыва
+								img.w-5.h-5(src="img/rating/star.svg" alt="alt")
+						
+					div(class="w-10 h-10 xs:col-start-3 xs:col-span-1 xs:row-start-1 xs:row-span-1 justify-self-end text-right")
+						span(class="icon-exit text-accent text-xl")

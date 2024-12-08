@@ -390,4 +390,39 @@ if(document.querySelector('#examples-slider .my-swiper') !== null){
 		});
 	}
 
+	if(document.querySelector('.reviews-swiper') !== null){
+  var swiperReviews = new Swiper('.reviews-swiper', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	spaceBetween: 24,
+
+	loop: true,
+	watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
+	  breakpoints: {
+	    // when window width is >= 320px
+	    320: {
+	    	slidesPerView: 1
+	    },
+	    // when window width is >= 480px
+	    767.98: {
+	    	slidesPerView: 2
+	    },
+	    // when window width is >= 640px
+	    1199.98: {
+	    	slidesPerView: 3
+	    }
+	},
+
+
+	  // Navigation arrows
+	  navigation: {
+	  	nextEl: '.reviews-next',
+	  	prevEl: '.reviews-prev',
+	  },
+
+
+		});
+	}
+
 }); //DOMContentLoaded

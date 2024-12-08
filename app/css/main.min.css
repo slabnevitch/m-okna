@@ -2692,6 +2692,15 @@ button:focus-visible{
 .mt-auto{
   margin-top: auto;
 }
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+.mb-2\.5{
+  margin-bottom: 0.625rem;
+}
+.mt-2\.5{
+  margin-top: 0.625rem;
+}
 .block{
   display: block;
 }
@@ -2721,6 +2730,9 @@ button:focus-visible{
 }
 .aspect-square{
   aspect-ratio: 1 / 1;
+}
+.aspect-\[352\/200\]{
+  aspect-ratio: 352/200;
 }
 .h-0{
   height: 0px;
@@ -2815,11 +2827,14 @@ button:focus-visible{
 .w-full{
   width: 100%;
 }
+.w-10{
+  width: 2.5rem;
+}
+.w-5{
+  width: 1.25rem;
+}
 .min-w-0{
   min-width: 0px;
-}
-.min-w-\[428px\]{
-  min-width: 428px;
 }
 .max-w-48{
   max-width: 12rem;
@@ -2857,14 +2872,14 @@ button:focus-visible{
 .basis-\[36\.18\%\]{
   flex-basis: 36.18%;
 }
+.basis-\[428px\]{
+  flex-basis: 428px;
+}
 .basis-\[calc\(33\.77\%_-_24px\)\]{
   flex-basis: calc(33.77% - 24px);
 }
 .basis-auto{
   flex-basis: auto;
-}
-.basis-\[428px\]{
-  flex-basis: 428px;
 }
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
@@ -2893,6 +2908,18 @@ button:focus-visible{
 .grid-cols-\[repeat\(auto-fit\2c minmax\(320px\2c 1fr\)\)\]{
   grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
 }
+.grid-cols-\[auto_1fr_38px\]{
+  grid-template-columns: auto 1fr 38px;
+}
+.grid-cols-\[repeat\(auto-fill\2c minmax\(288px\2c 1fr\)\)\]{
+  grid-template-columns: repeat(auto-fill,minmax(288px,1fr));
+}
+.grid-cols-\[repeat\(auto-fit\2c minmax\(288px\2c 1fr\)\)\]{
+  grid-template-columns: repeat(auto-fit,minmax(288px,1fr));
+}
+.grid-cols-\[auto_1fr_auto\]{
+  grid-template-columns: auto 1fr auto;
+}
 .flex-col{
   flex-direction: column;
 }
@@ -2904,6 +2931,9 @@ button:focus-visible{
 }
 .items-center{
   align-items: center;
+}
+.items-baseline{
+  align-items: baseline;
 }
 .justify-end{
   justify-content: flex-end;
@@ -2938,8 +2968,14 @@ button:focus-visible{
 .gap-x-9{
   column-gap: 2.25rem;
 }
+.gap-x-\[10\.53\%\]{
+  column-gap: 10.53%;
+}
 .gap-x-\[10\.74\%\]{
   column-gap: 10.74%;
+}
+.gap-y-11{
+  row-gap: 2.75rem;
 }
 .gap-y-14{
   row-gap: 3.5rem;
@@ -2953,20 +2989,32 @@ button:focus-visible{
 .gap-y-4{
   row-gap: 1rem;
 }
-.gap-y-7{
-  row-gap: 1.75rem;
-}
-.gap-x-\[10\.53\%\]{
-  column-gap: 10.53%;
-}
-.gap-y-11{
-  row-gap: 2.75rem;
-}
 .gap-y-6{
   row-gap: 1.5rem;
 }
+.gap-y-7{
+  row-gap: 1.75rem;
+}
 .gap-y-9{
   row-gap: 2.25rem;
+}
+.gap-x-2{
+  column-gap: 0.5rem;
+}
+.gap-x-2\.5{
+  column-gap: 0.625rem;
+}
+.gap-x-3\.5{
+  column-gap: 0.875rem;
+}
+.self-start{
+  align-self: flex-start;
+}
+.self-end{
+  align-self: flex-end;
+}
+.justify-self-end{
+  justify-self: end;
 }
 .overflow-hidden{
   overflow: hidden;
@@ -3057,6 +3105,18 @@ button:focus-visible{
 .bg-white\/75{
   background-color: rgb(255 255 255 / 0.75);
 }
+.bg-\[\#BFECFB\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 236 251 / var(--tw-bg-opacity));
+}
+.bg-\[\#DAF1CC\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(218 241 204 / var(--tw-bg-opacity));
+}
+.bg-\[\#F4E3E3\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 227 227 / var(--tw-bg-opacity));
+}
 .bg-\[url\(\'\.\.\/img\/hero\/decor\.svg\'\)\]{
   background-image: url('../img/hero/decor.svg');
 }
@@ -3131,6 +3191,18 @@ button:focus-visible{
   padding-top: 7.64%;
   padding-bottom: 7.64%;
 }
+.px-11{
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
 .pb-11{
   padding-bottom: 2.75rem;
 }
@@ -3197,8 +3269,23 @@ button:focus-visible{
 .pt-8{
   padding-top: 2rem;
 }
+.pb-8{
+  padding-bottom: 2rem;
+}
+.pl-0{
+  padding-left: 0px;
+}
+.pl-9{
+  padding-left: 2.25rem;
+}
+.pl-10{
+  padding-left: 2.5rem;
+}
 .text-center{
   text-align: center;
+}
+.text-right{
+  text-align: right;
 }
 .font-bold{
   font-family: "TTTravels-Bold", sans-serif;
@@ -3281,6 +3368,14 @@ button:focus-visible{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-\[\#373737\]{
+  --tw-text-opacity: 1;
+  color: rgb(55 55 55 / var(--tw-text-opacity));
+}
+.text-\[\#636363\]{
+  --tw-text-opacity: 1;
+  color: rgb(99 99 99 / var(--tw-text-opacity));
 }
 .underline{
   text-decoration-line: underline;
@@ -3511,6 +3606,10 @@ button:focus-visible{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-transparent:hover{
+  background-color: transparent;
+}
+
 .hover\:text-accent:hover{
   --tw-text-opacity: 1;
   color: rgb(43 40 98 / var(--tw-text-opacity));
@@ -3590,16 +3689,9 @@ button:focus-visible{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
-  .xxl\:max-w-\[90\%\]{
-    max-width: 90%;
-  }
   .xxl\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .xxl\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
   .xxl\:text-5xl{
     font-size: 3rem;
@@ -3625,6 +3717,9 @@ button:focus-visible{
   }
   .xl\:basis-\[40\%\]{
     flex-basis: 40%;
+  }
+  .xl\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .xl\:gap-x-1{
     column-gap: 0.25rem;
@@ -3740,20 +3835,14 @@ button:focus-visible{
   .lg\:pb-\[50px\]{
     padding-bottom: 50px;
   }
-  .lg\:pt-\[100px\]{
-    padding-top: 100px;
+  .lg\:pl-0{
+    padding-left: 0px;
   }
   .lg\:pr-10{
     padding-right: 2.5rem;
   }
-  .lg\:pl-10{
-    padding-left: 2.5rem;
-  }
-  .lg\:pl-4{
-    padding-left: 1rem;
-  }
-  .lg\:pl-0{
-    padding-left: 0px;
+  .lg\:pt-\[100px\]{
+    padding-top: 100px;
   }
   .lg\:text-white{
     --tw-text-opacity: 1;
@@ -3837,11 +3926,14 @@ button:focus-visible{
   .md\:mb-6{
     margin-bottom: 1.5rem;
   }
+  .md\:mb-8{
+    margin-bottom: 2rem;
+  }
   .md\:mb-9{
     margin-bottom: 2.25rem;
   }
-  .md\:mb-8{
-    margin-bottom: 2rem;
+  .md\:mb-5{
+    margin-bottom: 1.25rem;
   }
   .md\:block{
     display: block;
@@ -3854,6 +3946,9 @@ button:focus-visible{
   }
   .md\:aspect-\[320\/270\]{
     aspect-ratio: 320/270;
+  }
+  .md\:aspect-\[232\/152\]{
+    aspect-ratio: 232/152;
   }
   .md\:min-h-16{
     min-height: 4rem;
@@ -3873,17 +3968,20 @@ button:focus-visible{
   .md\:basis-auto{
     flex-basis: auto;
   }
+  .md\:grid-cols-1{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
   .md\:flex-col{
     flex-direction: column;
   }
   .md\:flex-col-reverse{
     flex-direction: column-reverse;
   }
+  .md\:gap-y-2{
+    row-gap: 0.5rem;
+  }
   .md\:gap-y-4{
     row-gap: 1rem;
-  }
-  .md\:gap-y-8{
-    row-gap: 2rem;
   }
   .md\:gap-y-6{
     row-gap: 1.5rem;
@@ -3891,15 +3989,23 @@ button:focus-visible{
   .md\:gap-y-9{
     row-gap: 2.25rem;
   }
-  .md\:gap-y-2{
-    row-gap: 0.5rem;
-  }
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .md\:px-7{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  .md\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
   .md\:pb-10{
     padding-bottom: 2.5rem;
+  }
+  .md\:pb-12{
+    padding-bottom: 3rem;
   }
   .md\:pb-8{
     padding-bottom: 2rem;
@@ -3916,11 +4022,17 @@ button:focus-visible{
   .md\:pt-20{
     padding-top: 5rem;
   }
-  .md\:pb-12{
-    padding-bottom: 3rem;
-  }
   .md\:pt-8{
     padding-top: 2rem;
+  }
+  .md\:pb-2{
+    padding-bottom: 0.5rem;
+  }
+  .md\:pb-2\.5{
+    padding-bottom: 0.625rem;
+  }
+  .md\:pb-16{
+    padding-bottom: 4rem;
   }
   .md\:text-2xl{
     font-size: 1.5rem;
@@ -3929,6 +4041,10 @@ button:focus-visible{
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3948,6 +4064,9 @@ button:focus-visible{
   .sm\:mb-2\.5{
     margin-bottom: 0.625rem;
   }
+  .sm\:mb-3{
+    margin-bottom: 0.75rem;
+  }
   .sm\:mb-4{
     margin-bottom: 1rem;
   }
@@ -3963,8 +4082,8 @@ button:focus-visible{
   .sm\:mt-0{
     margin-top: 0px;
   }
-  .sm\:mb-3{
-    margin-bottom: 0.75rem;
+  .sm\:flex{
+    display: flex;
   }
   .sm\:hidden{
     display: none;
@@ -4086,6 +4205,33 @@ button:focus-visible{
   .xs\:bottom-\[-15px\]{
     bottom: -15px;
   }
+  .xs\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+  .xs\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+  .xs\:col-span-3{
+    grid-column: span 3 / span 3;
+  }
+  .xs\:col-start-1{
+    grid-column-start: 1;
+  }
+  .xs\:col-start-2{
+    grid-column-start: 2;
+  }
+  .xs\:col-start-3{
+    grid-column-start: 3;
+  }
+  .xs\:row-span-1{
+    grid-row: span 1 / span 1;
+  }
+  .xs\:row-start-1{
+    grid-row-start: 1;
+  }
+  .xs\:row-start-2{
+    grid-row-start: 2;
+  }
   .xs\:mb-2{
     margin-bottom: 0.5rem;
   }
@@ -4107,17 +4253,20 @@ button:focus-visible{
   .xs\:hidden{
     display: none;
   }
+  .xs\:aspect-\[136\/132\]{
+    aspect-ratio: 136/132;
+  }
   .xs\:aspect-\[285\/182\]{
     aspect-ratio: 285/182;
   }
   .xs\:aspect-\[288\/235\]{
     aspect-ratio: 288/235;
   }
-  .xs\:aspect-\[136\/132\]{
-    aspect-ratio: 136/132;
-  }
   .xs\:w-10{
     width: 2.5rem;
+  }
+  .xs\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .xs\:gap-x-2{
     column-gap: 0.5rem;
@@ -4130,6 +4279,9 @@ button:focus-visible{
   }
   .xs\:bg-\[url\(\'\.\.\/img\/hero\/decor-mob\.svg\'\)\]{
     background-image: url('../img/hero/decor-mob.svg');
+  }
+  .xs\:p-6{
+    padding: 1.5rem;
   }
   .xs\:px-5{
     padding-left: 1.25rem;
@@ -4157,6 +4309,10 @@ button:focus-visible{
   .xs\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+  .xs\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
   .xs\:tracking-\[-\.5px\]{
     letter-spacing: -.5px;
