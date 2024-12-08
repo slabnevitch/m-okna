@@ -2854,6 +2854,15 @@ button:focus-visible{
 .max-w-full{
   max-width: 100%;
 }
+.max-w-md{
+  max-width: 28rem;
+}
+.max-w-xs{
+  max-width: 20rem;
+}
+.max-w-\[360px\]{
+  max-width: 360px;
+}
 .flex-auto{
   flex: 1 1 auto;
 }
@@ -2880,6 +2889,9 @@ button:focus-visible{
 }
 .basis-auto{
   flex-basis: auto;
+}
+.basis-1\/2{
+  flex-basis: 50%;
 }
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
@@ -2919,6 +2931,9 @@ button:focus-visible{
 }
 .grid-cols-\[auto_1fr_auto\]{
   grid-template-columns: auto 1fr auto;
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-col{
   flex-direction: column;
@@ -3006,6 +3021,12 @@ button:focus-visible{
 }
 .gap-x-3\.5{
   column-gap: 0.875rem;
+}
+.gap-x-\[11\.33\%\]{
+  column-gap: 11.33%;
+}
+.gap-y-5{
+  row-gap: 1.25rem;
 }
 .self-start{
   align-self: flex-start;
@@ -3280,6 +3301,12 @@ button:focus-visible{
 }
 .pl-10{
   padding-left: 2.5rem;
+}
+.pb-32{
+  padding-bottom: 8rem;
+}
+.pt-20{
+  padding-top: 5rem;
 }
 .text-center{
   text-align: center;
@@ -3911,6 +3938,14 @@ button:focus-visible{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+  .md\:mx-8{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .md\:mx-7{
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
   .md\:mb-12{
     margin-bottom: 3rem;
   }
@@ -4100,6 +4135,9 @@ button:focus-visible{
   .sm\:h-auto{
     height: auto;
   }
+  .sm\:h-12{
+    height: 3rem;
+  }
   .sm\:w-10{
     width: 2.5rem;
   }
@@ -4166,6 +4204,15 @@ button:focus-visible{
   }
   .sm\:pb-4{
     padding-bottom: 1rem;
+  }
+  .sm\:pb-2{
+    padding-bottom: 0.5rem;
+  }
+  .sm\:pb-0{
+    padding-bottom: 0px;
+  }
+  .sm\:align-middle{
+    vertical-align: middle;
   }
   .sm\:text-base{
     font-size: 1rem;

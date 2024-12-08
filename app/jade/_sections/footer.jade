@@ -1,1 +1,22 @@
-footer.footer
+footer(class="pt-20 pb-32")
+	div(class="max-w-[1824px] mx-auto xxl:px-4")
+		div(class="flex gap-x-6")
+			div(class="shrink-0 grow-0 basis-1/2 grid grid-cols-2 gap-x-[11.33%]")
+				div(class="shrink-0 grow-0 basis-1/2")
+					div(class="max-w-48 mb-14")
+						img.w-full(src="img/logo.svg" alt="alt")
+
+					p(class="max-w-[360px] text-base") © 2008-2023 ООО «рулон»
+						br
+						| Любое использование материалов с сайта возможно только при наличии активной ссылки на первоисточник.
+				
+				div(class="shrink-0 grow-0 basis-1/2")
+					- let footMenu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
+					ul(class="flex flex-col gap-y-5")
+						each li, i in footMenu
+							li
+								a(href="#" class="text-lg  font-bold")= li
+
+
+			div(class="shrink-0 grow-0 basis-1/2 flex gap-x-6")
+
