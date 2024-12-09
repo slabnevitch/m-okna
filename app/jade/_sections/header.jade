@@ -1,16 +1,16 @@
-header(class="sticky z-[5] w-full left-0 top-0 overflow-hidden bg-white shadow-md")
+header(class="sticky z-[5] w-full left-0 top-0 overflow-hidden bg-white")
 	div(class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20 md:min-h-16")
 		div(class="flex items-center gap-x-12 xl:gap-x-6")
 			div(class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 lg:z-[11]")
 				img.w-full(src="img/logo.svg" alt="alt")
 
 			nav(class="mt-4 xl:mt-2")
-				- let menu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
-				
+				- let menu = [{name: 'Каталог'}, {anchor: 'mats', name: 'Материалы'}, {anchor:'faq', name:'FAQ'}, {anchor:'folio', name:'Работы'}, {anchor:'about', name:'О компании'}, {anchor:'reviews', name:'Отзывы'}];
+
 				+tw-mob-menu('flex flex-wrap items-center gap-x-6 xl:gap-x-3', 'lg', 'accent', '[#fff]', 16)
 					each li, i in menu
 						li(class="")
-							a(href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white")= li
+							a(href="#" data-anchor=li.anchor ? li.anchor : false class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white")= li.name
 
 		div(class="flex gap-x-9 text-accent mt-4 xl:gap-x-4 xl:mt-2 xl:ml-auto")
 			a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent xl:gap-x-1 md:hidden")

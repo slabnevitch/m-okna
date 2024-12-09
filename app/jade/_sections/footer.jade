@@ -11,11 +11,11 @@ footer(class="pt-20 pb-32 md:pt-12 md:pb-8")
 						| Любое использование материалов с сайта возможно только при наличии активной ссылки на первоисточник.
 				
 				div(class="xs:hidden")
-					- let footMenu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
+					- let footMenu = [{name: 'Каталог'}, {anchor: 'mats', name: 'Материалы'}, {anchor:'faq', name:'FAQ'}, {anchor:'folio', name:'Работы'}, {anchor:'about', name:'О компании'}, {anchor:'reviews', name:'Отзывы'}];
 					ul(class="flex flex-col gap-y-5")
 						each li, i in footMenu
 							li
-								a(href="#" class="text-lg  font-bold")= li
+								a(href="#" data-anchor=li.anchor ? li.anchor : false class="text-lg  font-bold")= li.name
 
 
 			div(class="shrink-0 grow-0 basis-1/2 flex justify-between gap-x-6 pr-40 xl:pr-8 md:pr-0 md:pr-0 lg:flex-col lg:gap-y-8 md:basis-auto md:flex-row xs:flex-col xs:gap-y-7")

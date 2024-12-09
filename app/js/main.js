@@ -72,7 +72,7 @@ Swiper.use([Navigation, Pagination, Autoplay, Parallax, Grid]);
 // require ('~/app/libs-vanilla/service-functions/scrollWidth.js');
 
 //- scroll-to-sects--------------------------
-// import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.js';
 
 //- ScrollTabs (прокрутка длинных табов на моббильных экранах)-------------------------- 
 // import {ScrollTabs} from '~/app/libs-vanilla/service-functions/all-functions.js';
@@ -118,7 +118,6 @@ Swiper.use([Navigation, Pagination, Autoplay, Parallax, Grid]);
 //- VANILLA JS===================================
 //- dynamic-adaptive--------------------------
 import {Quiz} from '~/app/libs-vanilla/quiz/quiz.js';
-console.log(Quiz)
 
 //- dynamic-adaptive--------------------------
 // require('~/app/libs-vanilla/dynamic-adaptive/da(es6).js')
@@ -217,11 +216,45 @@ var VenoBox = require('~/app/libs-vanilla/VenoBox/dist/venobox.js')
 // console.log(magnificPopup)
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	//использовать вместе с гистами "header HTML for _scroll" и "styles for _scroll.header"
+		var headerElem = document.querySelector('#hero'),
+		observerCallback = function(entries, observer) {
+			console.log(entries);
+			if(entries[0].isIntersecting){
+				 document.querySelector('header').classList.remove('shadow-md');
+			}else{
+				 document.querySelector('header').classList.add('shadow-md');
+			}
+		};
+
+		var headerObserver = new IntersectionObserver(observerCallback);
+		headerObserver.observe(headerElem);
+
 	document.querySelector('#burger').onclick = function(e) {
 		document.querySelector('#burger').classList.toggle('on');
 		document.documentElement.classList.toggle('menu-opened');
 		document.documentElement.classList.toggle('lock');
 	}
+
+	function mobMenuClose(){
+		document.querySelector('#burger').classList.remove('on');
+		document.documentElement.classList.remove('menu-opened');
+		document.documentElement.classList.remove('lock');
+	}
+
+	new ScrollToSects({
+	  linksContainer: 'header, footer',//контейнер, в котором лежат кнопки навигации
+	  offset: -50,//отступ от верха экрана при прокрутке (если нужен)
+	  sectsSelector: '[data-anchor-target]',//селектор секций, если не section
+	   delay: 300,//задержка перед прокруткой. Может понадобится, елсли перед прокруткой нужно время на анимацию закрытия моб. меню, например
+	   anchorSpy: false, //добавление активного класса ссылке при скролле, если соответствующая ей секция попадает в экран
+	   activeClassAdding: false, //добавление классов активным ссылкам
+		afterNavClick: function(){
+			console.log('after nav!');
+			mobMenuClose();
+		}
+	});
 
 	//---------------Swiper
 	if(document.querySelector('.hero-swiper') !== null){
@@ -422,7 +455,7 @@ if(document.querySelector('#examples-slider .my-swiper') !== null){
 	  },
 
 
-		});
+		})
 	}
 
 }); //DOMContentLoaded

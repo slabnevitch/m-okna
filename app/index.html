@@ -19,18 +19,18 @@
   </head>
   <body class="h-full">
     <div class="flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-      <header class="sticky z-[5] w-full left-0 top-0 overflow-hidden bg-white shadow-md">
+      <header class="sticky z-[5] w-full left-0 top-0 overflow-hidden bg-white">
         <div class="max-w-cont mx-auto px-8 flex gap-x-6 justify-between items-center min-h-28 py-2.5 xl:min-h-20 md:min-h-16">
           <div class="flex items-center gap-x-12 xl:gap-x-6">
             <div class="max-w-48 shrink-0 xl:max-w-36 md:max-w-32 sm:-ml-4 lg:z-[11]"><img src="img/logo.svg" alt="alt" class="w-full"></div>
             <nav class="mt-4 xl:mt-2">
                   <ul class="flex flex-wrap items-center gap-x-6 xl:gap-x-3 group-[.menu-opened]/element:right-0 lg:fixed lg:z-10 lg:top-0 lg:-right-[100%] lg:pt-[100px] lg:pb-[50px] lg:flex-col lg:flex-nowrap lg:justify-center lg:items-center lg:gap-y-[2rem] lg:w-full lg:h-full lg:transition-[right] lg:duration-500 lg:overflow-y-auto lg:bg-accent lg:before:fixed lg:before:w-full lg:before:h-16 lg:before:top-0 lg:before:-right-[100%] lg:before:duration-500 lg:before:transition-[right] lg:before:z-2 lg:before:bg-[#fff] group-[.menu-opened]/element:before:right-0">
                     <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Каталог</a></li>
-                    <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Материалы</a></li>
-                    <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">FAQ</a></li>
-                    <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Работы</a></li>
-                    <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">О компании</a></li>
-                    <li><a href="#" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Отзывы</a></li>
+                    <li><a href="#" data-anchor="mats" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Материалы</a></li>
+                    <li><a href="#" data-anchor="faq" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">FAQ</a></li>
+                    <li><a href="#" data-anchor="folio" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Работы</a></li>
+                    <li><a href="#" data-anchor="about" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">О компании</a></li>
+                    <li><a href="#" data-anchor="reviews" class="text-lg font-bold text-accent leading-5 xl:text-sm lg:text-white">Отзывы</a></li>
                   </ul>
             </nav>
           </div>
@@ -41,7 +41,7 @@
         </div>
       </header>
       <main class="flex-auto shrink-1 grow-1">
-        <section>
+        <section id="hero">
           <div class="relative z-[2] max-w-[1824px] mx-auto bg-accent">
                 <div class="swiper-container swiper hero-swiper">
                   <div class="swiper-wrapper">
@@ -152,7 +152,7 @@
             </article>
           </div>
         </div>
-        <section>
+        <section data-anchor-target="mats">
           <div class="relative max-w-[1824px] mb-20 mx-auto xxl:px-4 sm:mb-10">
             <h2 class="mb-14 sm:mb-8">Используемый материал</h2>
             <div class="grid grid-cols-3 gap-x-6 gap-y-4 lg:grid-cols-2 sm:grid-cols-1">
@@ -283,7 +283,7 @@
             </div>
           </div>
         </section>
-        <section>
+        <section data-anchor-target="faq">
           <div class="relative max-w-[1824px] mx-auto pt-24 pb-28 flex gap-x-6 md:flex-col md:gap-y-4 md:pt-12 md:pb-10 md:flex-col-reverse">
             <h2 class="mb-24 md:mb-9 hidden md:block md:order-2">Ответы 
               <div class="md:inline xs:block">на частые</div>
@@ -359,7 +359,7 @@
             </div>
           </div>
         </section>
-        <section class="mb-24 md:mb-12">
+        <section data-anchor-target="folio" class="mb-24 md:mb-12">
           <div class="max-w-cont px-8 mx-auto xxl:px-4">
             <div class="mb-16 flex items-center justify-between gap-x-6 sm:mb-7">
               <h2>Примеры работ</h2>
@@ -542,7 +542,7 @@
             </div>
           </div>
         </section>
-        <section class="pb-24 md:pb-12">
+        <section data-anchor-target="about" class="pb-24 md:pb-12">
           <div class="max-w-[1824px] mx-auto xxl:px-4">
             <div class="flex gap-x-[10.53%] gap-x-9 md:flex-col md:gap-y-9">
               <div class="grow shrink basis-auto">
@@ -573,7 +573,7 @@
             </div>
           </div>
         </section>
-        <section class="pb-28 md:pb-12">
+        <section data-anchor-target="reviews" class="pb-28 md:pb-12">
           <div class="max-w-[1824px] mx-auto xxl:px-4">
             <div class="mb-16 flex items-center justify-between gap-x-6 sm:mb-7">
               <h2>Отзывы</h2>
@@ -682,7 +682,7 @@
                   </div>
                   <div class="relative">
                     <label class="block mb-3">
-                      <textarea id="quiz-textarea" autocomplete="off" type="text" name="message" placeholder="Расскажите подробнее" maxlength="255" aria-describedby="charCount" class="h-16 w-full pb-7 pr-12 resize-none border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0 sm:align-middle sm:text-sm sm:pb-0 sm:h-14 focus-visible:outline-none"></textarea>
+                      <textarea id="textarea" autocomplete="off" type="text" name="message" placeholder="Расскажите подробнее" maxlength="255" aria-describedby="charCount" class="h-16 w-full pb-7 pr-12 resize-none border-b border-white text-white placeholder-white text-2xl font-light bg-transparent focus:outline-0 sm:align-middle sm:text-sm sm:pb-0 sm:h-14 focus-visible:outline-none"></textarea>
                     </label>
                     <label class="absolute w-12 h-12 flex items-center justify-center top-1/2 -right-4 cursor-pointer -translate-y-1/2">
                       <input type="file" name="file-attach" class="absolute w-0 h-0 block left-1/2 top-full m-0 p-0 opacity-0"><span class="w-6 h-6 bg-[url('../img/icons-svg/attach.svg')] bg-no-repeat bg-contain"></span>
@@ -1821,11 +1821,11 @@
                 <div class="xs:hidden">
                   <ul class="flex flex-col gap-y-5">
                     <li><a href="#" class="text-lg  font-bold">Каталог</a></li>
-                    <li><a href="#" class="text-lg  font-bold">Материалы</a></li>
-                    <li><a href="#" class="text-lg  font-bold">FAQ</a></li>
-                    <li><a href="#" class="text-lg  font-bold">Работы</a></li>
-                    <li><a href="#" class="text-lg  font-bold">О компании</a></li>
-                    <li><a href="#" class="text-lg  font-bold">Отзывы</a></li>
+                    <li><a href="#" data-anchor="mats" class="text-lg  font-bold">Материалы</a></li>
+                    <li><a href="#" data-anchor="faq" class="text-lg  font-bold">FAQ</a></li>
+                    <li><a href="#" data-anchor="folio" class="text-lg  font-bold">Работы</a></li>
+                    <li><a href="#" data-anchor="about" class="text-lg  font-bold">О компании</a></li>
+                    <li><a href="#" data-anchor="reviews" class="text-lg  font-bold">Отзывы</a></li>
                   </ul>
                 </div>
               </div>
