@@ -1,16 +1,16 @@
-footer(class="pt-20 pb-32")
+footer(class="pt-20 pb-32 md:pt-12 md:pb-8")
 	div(class="max-w-[1824px] mx-auto xxl:px-4")
-		div(class="flex gap-x-6")
-			div(class="shrink-0 grow-0 basis-1/2 grid grid-cols-2 gap-x-[11.33%]")
-				div(class="shrink-0 grow-0 basis-1/2")
-					div(class="max-w-48 mb-14")
+		div(class="flex gap-x-6 md:flex-col md:gap-y-7")
+			div(class="shrink-0 grow-0 basis-1/2 grid grid-cols-2 gap-x-[11.33%] md:basis-auto xs:grid-cols-1")
+				div(class="")
+					div(class="max-w-48 mb-14 md:mb-6 xs:max-w-32")
 						img.w-full(src="img/logo.svg" alt="alt")
 
-					p(class="max-w-[360px] text-base") © 2008-2023 ООО «рулон»
+					p(class="max-w-[360px] text-base xs:max-w-none sm:text-sm") © 2008-2023 ООО «рулон»
 						br
 						| Любое использование материалов с сайта возможно только при наличии активной ссылки на первоисточник.
 				
-				div(class="shrink-0 grow-0 basis-1/2")
+				div(class="xs:hidden")
 					- let footMenu = ['Каталог', 'Материалы', 'FAQ', 'Работы', 'О компании', 'Отзывы'];
 					ul(class="flex flex-col gap-y-5")
 						each li, i in footMenu
@@ -18,5 +18,23 @@ footer(class="pt-20 pb-32")
 								a(href="#" class="text-lg  font-bold")= li
 
 
-			div(class="shrink-0 grow-0 basis-1/2 flex gap-x-6")
+			div(class="shrink-0 grow-0 basis-1/2 flex justify-between gap-x-6 pr-40 xl:pr-8 md:pr-0 md:pr-0 lg:flex-col lg:gap-y-8 md:basis-auto md:flex-row xs:flex-col xs:gap-y-7")
+				
+				div(class="shrink-0 grow-0 basis-1/2")
+					div(class="grid gap-y-8 xs:gap-y-5")
+						a(href="mailto:ru_lon68@mail.ru" class="flex items-center gap-x-3 font-bold leading-5 text-accent")
+							span.icon-mail.shrink-0.text-base
+							span(class="text-lg") ru_lon68@mail.ru
 
+						a(href="tel:89107577471" class="flex items-center gap-x-3 font-bold leading-5 text-accent")
+							span.icon-phone.shrink-0.text-base
+							span(class="text-lg  whitespace-nowrap") 8 (910) 757-74-71
+
+						address(class="flex items-start gap-x-3")
+							span.icon-location.text-2xl.shrink-0
+							span(class="text-base xl:text-sm not-italic") г. Ковров, Владимирская обл., ул. Локомотивная 11
+
+				div(class="shrink-0 grow-0 basis-1/2")
+					a(href="#" class="btn xs:w-full")
+						span Заказать звонок
+						span.icon-exit.text-base
